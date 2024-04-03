@@ -1,5 +1,7 @@
-<h1 align="center">Hi 👋, I'm Joe</h1>
-<h3 align="center">Over a decade of experience in iOS app development.</h3>
+<h1 align="left">Hi 👋, I'm Joe</h1>
+<h3 align="left">Over a decade of experience in iOS app development.</h3>
+
+<a href="https://github.com/shinrenpan/Note/discussions">Blog</a>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shinrenpan&label=Profile%20views&color=0e75b6&style=flat" alt="shinrenpan" /> </p>
 
