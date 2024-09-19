@@ -1,5 +1,6 @@
 Name: Joe Pan  
 Mail: shinren.pan@gmail.com  
+GitHub: https://github.com/shinrenpan  
 Blog: https://shinrenpan.github.io  
 
 # Summary
