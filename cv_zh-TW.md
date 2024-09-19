@@ -19,8 +19,8 @@ iOS 工程師.
 
 ## 程式語言
 
-- Objective-C 2009 ~ Now
-- Swift 3.0 ~ Now
+- Objective-C 2009 ~ present
+- Swift 3.0 ~ present
 
 ## 語言
 
