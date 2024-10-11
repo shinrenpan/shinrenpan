@@ -296,7 +296,7 @@ Associate Degree in Electronic Engineering
 [cocos2d for iPhone]: https://zh.wikipedia.org/wiki/Cocos2d
 [SignalR]: https://learn.microsoft.com/zh-tw/aspnet/signalr/overview/getting-started/introduction-to-signalr
 [Clean Swift]: https://clean-swift.com/
-[MVVVR]: https://shinrenpan.github.io/project/01.html
+[MVVVR]: https://shinrenpan.github.io/01/
 [gRPC]: https://grpc.io
 
 [單身銀行]: https://itunes.apple.com/tw/app/單身銀行-實名制-未婚身份認證/id672623637?mt=8
