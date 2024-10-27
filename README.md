@@ -3,6 +3,9 @@
 
 <a href="https://shinrenpan.github.io">Blog</a>
 
+[中文履歷](Resume_zhTW.md)  
+[English Resume](Resume_en.md)  
+
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=shinrenpan&label=Profile%20views&color=0e75b6&style=flat" alt="shinrenpan" /> </p>
 
 <h3 align="left">Connect with me:</h3>
