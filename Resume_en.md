@@ -277,7 +277,7 @@ Associate Degree in Electronic Engineering
 
 
 
-[Article1]: https://shinrenpan.github.io/05/
+[Article1]: https://github.com/shinrenpan/shinrenpan/discussions/15
 [Article2]: http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/
 
 [video1]: https://youtu.be/npV4b-Z9A4w?t=177
@@ -296,7 +296,7 @@ Associate Degree in Electronic Engineering
 [cocos2d for iPhone]: https://zh.wikipedia.org/wiki/Cocos2d
 [SignalR]: https://learn.microsoft.com/zh-tw/aspnet/signalr/overview/getting-started/introduction-to-signalr
 [Clean Swift]: https://clean-swift.com/
-[MVVVR]: https://shinrenpan.github.io/01/
+[MVVVR]: https://github.com/shinrenpan/shinrenpan/discussions/18
 [gRPC]: https://grpc.io
 
 [單身銀行]: https://itunes.apple.com/tw/app/單身銀行-實名制-未婚身份認證/id672623637?mt=8
