@@ -82,6 +82,15 @@ Types of apps developed:
 
 # Work Experience
 
+## DRACO EVOLUTION
+
+### iOS Engineer 2025/04 ~ Present
+
+Developed and maintained the company’s app.
+
+- Assumed ownership of a previously outsourced application built with SwiftUI and [TCA] (The Composable Architecture).
+- Managed the incremental upgrade of the [TCA] library from version 1.10.4 to the latest stable release, ensuring code modernity and stability.
+
 ## EVERVICTORY TECHNOLOGY
 
 ### iOS Engineer 2023/09 - 2024/09
@@ -334,3 +343,4 @@ Associate Degree in Electronic Engineering
 [HaishinKit]: https://github.com/shogo4405/HaishinKit.swift
 [grpc-swift]: https://github.com/grpc/grpc-swift
 [connect-swift]: https://github.com/connectrpc/connect-swift
+[TCA]: https://github.com/pointfreeco/swift-composable-architecture

@@ -81,6 +81,17 @@ iOS 工程師.
 
 # 工作經歷
 
+## DRACO EVOLUTION
+
+### iOS 工程師 2025/04 ~ 迄今
+
+開發與維護公司 App
+
+工作內容:
+
+- 接手公司外包 App, SwiftUI + [TCA]
+- 將 [TCA] 由舊版 1.10.4 逐漸升至最新版
+
 ## 皆凱科技
 
 ### iOS 工程師 2023/09 ~ 2024/09
@@ -377,3 +388,4 @@ iOS 學習階段2009 (六個月)
 [ijkplayer]: https://github.com/bilibili/ijkplayer
 [Alamofire]: https://github.com/Alamofire/Alamofire
 [HaishinKit]: https://github.com/shogo4405/HaishinKit.swift
+[TCA]: https://github.com/pointfreeco/swift-composable-architecture
