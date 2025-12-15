@@ -51,6 +51,7 @@ iOS 工程師.
 - Instant Message
   - XMPP with [XMPPFramework]
   - MQTT with [MQTT-Client-Framework]
+  - WebSocket with [URLSessionWebSocketTask](https://developer.apple.com/documentation/foundation/urlsessionwebsockettask)
   - Socket with [NSStream]
   - SignalR with [SignalR-ObjC], [SignalR-Client-Swift](https://github.com/moozzyk/SignalR-Client-Swift)
   - Live streaming with [ijkplayer], [HaishinKit], [ReplayKit]
@@ -100,7 +101,6 @@ iOS 工程師.
 
 工作內容:
 
-- 使用 [MVVVR] 架構開發.
 - 導入 [XcodeGen] 管理 Project.
 - 使用 [SignalR] 介接資料.
 - 客製化 UI.
@@ -115,7 +115,6 @@ iOS 工程師.
 工作內容:
 
 - 使用 Swift 開發維護 App, 並與 3rd-party Objective-C 混編.
-- 使用 [MVVVR] 架構開發.
 - 導入 [XcodeGen] 管理 Project.
 - 實作 App 審核時, 隱藏 UI 功能.
 - 客製化 UI.
@@ -132,7 +131,6 @@ iOS 工程師.
 
 工作內容:
 
-- 將 iOS Client 從 MVC 改為 [MVVVR] 架構.
 - 移除 Storyboard, 改使用 Hardcoded 方式實作 UI, 較容易客製化 UI.
 - 學習 Golang 並研讀 Server 端程式碼
 
@@ -161,7 +159,6 @@ App 內容包含:
 - 導入 [XcodeGen] 管理 Project, 避免 Project 常產生 Git 衝突.
 - 研究 [Tuist] 與 [XcodeGen] 差異.
 - 主導專案由 Objective-C 逐漸轉換成 Swift.
-- 導入 [MVVVR] 架構開發.
 - 移除常年不維護第三方套件, 使用原生 API 替代.
 - 移除使用 [GCDWebServer] 播放本地端 m3u8, 使用原生 API 替代, 參考[文章1].
 - 撰寫 Script 切換環境.
@@ -333,7 +330,7 @@ iOS 學習階段2009 (六個月)
 
 五專電子工程科畢業
 
-[文章1]: https://github.com/shinrenpan/shinrenpan/discussions/15
+[文章1]: https://shinrenpan.github.io/2022-07-13/
 [文章2]: http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/
 
 [影片1]: https://youtu.be/npV4b-Z9A4w?t=177
@@ -352,7 +349,6 @@ iOS 學習階段2009 (六個月)
 [cocos2d for iPhone]: https://zh.wikipedia.org/wiki/Cocos2d
 [SignalR]: https://learn.microsoft.com/zh-tw/aspnet/signalr/overview/getting-started/introduction-to-signalr
 [Clean Swift]: https://clean-swift.com/
-[MVVVR]: https://github.com/shinrenpan/shinrenpan/discussions/18
 [gRPC]: https://grpc.io
 
 [單身銀行]: https://itunes.apple.com/tw/app/單身銀行-實名制-未婚身份認證/id672623637?mt=8

@@ -51,6 +51,7 @@ Types of apps developed:
 - Instant Messaging
   - XMPP with [XMPPFramework]
   - MQTT with [MQTT-Client-Framework]
+  - WebSocket with [URLSessionWebSocketTask](https://developer.apple.com/documentation/foundation/urlsessionwebsockettask)
   - Socket with [NSStream]
   - SignalR with [SignalR-ObjC], [SignalR-Client-Swift](https://github.com/moozzyk/SignalR-Client-Swift)
   - Live streaming with [ijkplayer], [HaishinKit], [ReplayKit]
@@ -97,7 +98,6 @@ Developed and maintained the company’s app.
 
 Developed and maintained the company’s finance app, [video10]
 
-- Developed using the [MVVVR] architecture.
 - Managed projects with [XcodeGen].
 - Integrated data using [SignalR].
 - Customized UI.
@@ -110,7 +110,6 @@ Developed and maintained the company’s finance app, [video10]
 Developed and maintained the [金田GT] app, [video9]
 
 - Developed and maintained using Swift, with mixed integration of 3rd-party Objective-C.
-- Implemented the [MVVVR] architecture.
 - Managed projects with [XcodeGen].
 - Implemented hidden UI features for app review.
 - Customized UI.
@@ -124,7 +123,6 @@ Developed and maintained the [金田GT] app, [video9]
 
 IM Software Development based on [Tinode]
 
-- Refactored the iOS client from MVC to [MVVVR] architecture.
 - Removed Storyboard and implemented UI using hardcoded methods for easier customization.
 - Learned Golang and studied server-side code.
 
@@ -139,7 +137,6 @@ Developed and maintained the company’s app, which included features such as sh
 - Introduced [XcodeGen] for project management to avoid frequent Git conflicts.
 - Researched the differences between [Tuist] and [XcodeGen].
 - Led the gradual migration of the project from Objective-C to Swift.
-- Implemented the [MVVVR] architecture for development.
 - Removed unmaintained third-party libraries, replacing them with native APIs.
 Replaced [GCDWebServer] for local m3u8 playback with native APIs, based on [Article1].
 - Wrote scripts for environment switching.
@@ -286,7 +283,7 @@ Associate Degree in Electronic Engineering
 
 
 
-[Article1]: https://github.com/shinrenpan/shinrenpan/discussions/15
+[Article1]: https://shinrenpan.github.io/2022-07-13/
 [Article2]: http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/
 
 [video1]: https://youtu.be/npV4b-Z9A4w?t=177
@@ -305,7 +302,6 @@ Associate Degree in Electronic Engineering
 [cocos2d for iPhone]: https://zh.wikipedia.org/wiki/Cocos2d
 [SignalR]: https://learn.microsoft.com/zh-tw/aspnet/signalr/overview/getting-started/introduction-to-signalr
 [Clean Swift]: https://clean-swift.com/
-[MVVVR]: https://github.com/shinrenpan/shinrenpan/discussions/18
 [gRPC]: https://grpc.io
 
 [單身銀行]: https://itunes.apple.com/tw/app/單身銀行-實名制-未婚身份認證/id672623637?mt=8
