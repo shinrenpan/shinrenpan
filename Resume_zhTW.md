@@ -1,6 +1,6 @@
 # Joe Pan — 資深 iOS 工程師
 
-**Mail:** shinren.pan@gmail.com　　**GitHub:** https://github.com/shinrenpan　　**Blog:** https://shinrenpan.github.io
+**Mail:** shinren.pan@gmail.com  **GitHub:** https://github.com/shinrenpan  **Blog:** https://shinrenpan.github.io
 
 ---
 
