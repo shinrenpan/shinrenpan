@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 9.5pt;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: white;
+    padding: 13mm 14mm;
+  }
+
+  /* Header */
+  .header { margin-bottom: 10px; }
+  .header h1 { font-size: 20pt; font-weight: 700; color: #111; margin-bottom: 3px; font-family: Georgia, serif; }
+  .contact { font-size: 8.5pt; color: #555; font-family: Arial, sans-serif; }
+  .contact a { color: #555; text-decoration: none; }
+
+  /* Sections */
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #111;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+    margin-top: 13px;
+    margin-bottom: 7px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Body text sans-serif for readability */
+  p, li, td, th, .skill-desc, .job-sub, .contact {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Job blocks */
+  .job { margin-bottom: 10px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .job-title { font-size: 10pt; font-weight: 700; color: #111; font-family: Arial, sans-serif; }
+  .job-period { font-size: 8.5pt; color: #666; white-space: nowrap; font-family: Arial, sans-serif; }
+  .job-sub { font-size: 8.5pt; color: #666; margin-bottom: 4px; }
+
+  .sub-block { margin-top: 5px; margin-bottom: 2px; }
+  .sub-block-title { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 2px; font-family: Arial, sans-serif; }
+
+  p { margin-bottom: 3px; }
+  ul { padding-left: 14px; margin-top: 2px; margin-bottom: 2px; }
+  li { margin-bottom: 2px; }
+
+  /* Skills */
+  .skill-block { margin-bottom: 6px; }
+  .skill-label { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 2px; font-family: Arial, sans-serif; }
+  .skill-desc { font-size: 9pt; color: #333; margin-bottom: 3px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
+  .tag {
+    background: #efefef;
+    color: #333;
+    font-size: 8pt;
+    padding: 1px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 4px 0; font-size: 9pt; font-family: Arial, sans-serif; }
+  th { background: #f5f5f5; font-weight: 700; text-align: left; padding: 4px 8px; border: 1px solid #ddd; }
+  td { padding: 3px 8px; border: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafafa; }
+
+  .note {
+    border-left: 2px solid #aaa;
+    padding-left: 8px;
+    color: #555;
+    font-size: 8.5pt;
+    font-style: italic;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+  }
+
+  a { color: #1a56b0; text-decoration: none; }
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 8px 0; }
+  strong { font-weight: 700; }
+  code {
+    background: #efefef;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    font-size: 8.5pt;
+    padding: 0 4px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Joe Pan — Senior iOS Engineer</h1>
+  <div class="contact">
+    shinren.pan@gmail.com　　
+    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>　　
+    <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<h2>Summary</h2>
+<p>Over <strong>15 years</strong> of hands-on iOS development experience across a wide range of app types — MFi hardware accessories, instant messaging, video streaming, and fintech — participating in every stage of the platform's evolution from pure Objective-C to modern Swift and SwiftUI.</p>
+<p style="margin-top:4px">Focused on <strong>architecture design and refactoring</strong>: leading ObjC-to-Swift migrations, designing UIHostingController + SwiftUI hybrid navigation systems, all guided by the principles of maintainability, loose coupling, and full control. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short.</p>
+<p style="margin-top:4px">Follows a <strong>native-first philosophy</strong>: Apple's native APIs are always the first choice; third-party dependencies are introduced only when there is no viable native alternative, keeping maintenance overhead and binary size in check.</p>
+<p style="margin-top:4px">Recently established a systematic <strong>AI-assisted development workflow</strong> (Claude + Skill specs), building reusable architecture reference documents that allow AI to generate spec-compliant code aligned with the project's existing conventions, meaningfully shortening feature development cycles.</p>
+
+<!-- SKILLS -->
+<h2>Skills</h2>
+
+<div class="skill-block">
+  <div class="skill-label">Languages</div>
+  <div class="tags">
+    <span class="tag">Swift 3.0 – present</span>
+    <span class="tag">Objective-C 2009 – present</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">UI</div>
+  <div class="skill-desc">Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The UIHostingController + SwiftUI hybrid pattern is the current primary architecture. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.</div>
+  <div class="tags">
+    <span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController hybrid</span>
+    <span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Architecture</div>
+  <div class="skill-desc">Not tied to a single pattern — prioritises maintainability and team adaptability. Has led or contributed to the adoption and refactoring of multiple architectures; designs custom solutions when standard ones prove inadequate.</div>
+  <div class="tags">
+    <span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span>
+    <span class="tag">Custom UIHostingController + SwiftUI architecture</span><span class="tag">@Observable / @MainActor</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Networking</div>
+  <div class="skill-desc">URLSession is the default (native-first); gRPC is used where the project requires it. Practical experience with Alamofire and other third-party networking libraries.</div>
+  <div class="tags">
+    <span class="tag">URLSession</span><span class="tag">gRPC (grpc-swift / connect-swift)</span><span class="tag">Alamofire</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Real-Time Communication</div>
+  <div class="skill-desc">Hands-on production experience with all major messaging protocols, covering both text-based communication and live video streaming.</div>
+  <div class="tags">
+    <span class="tag">WebSocket</span><span class="tag">XMPP</span><span class="tag">MQTT</span><span class="tag">SignalR</span>
+    <span class="tag">VoIP</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Persistence</div>
+  <div class="skill-desc">Native solutions are preferred; major third-party options have also been used in production.</div>
+  <div class="tags">
+    <span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">Keychain</span>
+    <span class="tag">NSKeyedArchiver</span><span class="tag">Realm</span><span class="tag">fmdb</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Bluetooth</div>
+  <div class="tags"><span class="tag">BLE 4.0</span><span class="tag">iBeacon</span></div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Toolchain</div>
+  <table>
+    <tr><th style="width:22%">Category</th><th>Tools</th></tr>
+    <tr><td>Version Control</td><td>Git</td></tr>
+    <tr><td>Package Management</td><td>Swift Package Manager, CocoaPods, Carthage</td></tr>
+    <tr><td>Project Management</td><td>XcodeGen, Tuist</td></tr>
+    <tr><td>CI / CD</td><td>Xcode Cloud, Jenkins, Fastlane, Firebase App Distribution</td></tr>
+    <tr><td>AI Development</td><td>Claude (CLAUDE.md + Skill specs for systematic code generation)</td></tr>
+  </table>
+</div>
+
+<!-- EXPERIENCE -->
+<h2>Experience</h2>
+
+<!-- DRACO -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">DRACO EVOLUTION</span>
+    <span class="job-period">Apr 2025 – Present</span>
+  </div>
+  <div class="job-sub">Senior iOS Engineer　·　Took over from an outsourced team; sole iOS engineer at the company</div>
+  <p>Independently assessed code quality, paid down technical debt, and has been iterating on the product continuously since handover.</p>
+  <ul>
+    <li><strong>TCA upgrade and removal:</strong> Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2 (1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2). During routine maintenance and feature development, identified that TCA's built-in Navigation Stack could not accommodate the app's non-standard routing requirements, prompting a gradual architectural rewrite that went live on 18 Sep 2025.</li>
+    <li><strong>Custom UIHostingController + SwiftUI navigation architecture:</strong> <code>UIHostingController</code> serves as the navigation unit while SwiftUI handles rendering. Each feature is owned by a <code>FeatureHostController</code> that holds the ViewModel; routing logic stays in the host layer and SwiftUI views remain free of UIKit dependencies, achieving loose coupling and high maintainability. The pattern was codified into internal Skill documents.</li>
+    <li><strong>Xcode Cloud CI/CD pipeline:</strong> Dev builds distribute automatically to TestFlight internal testers; production builds distribute to TestFlight external testers — fully automated, no manual steps required.</li>
+    <li><strong>AI-assisted development workflow (Claude + Skill):</strong> Authored <code>CLAUDE.md</code> and a suite of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency, etc.) so that Claude generates feature code that conforms to the project's existing architecture, significantly reducing time-to-feature.</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- 皆凱 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Evervictory Technology</span>
+    <span class="job-period">Sep 2023 – Sep 2024</span>
+  </div>
+  <div class="job-sub">iOS Engineer　·　Lead developer in a 3-person iOS team; the other two focused on an in-house K-Line library and a separate VPN app</div>
+  <p>Primary maintainer of a fintech trading platform and <a href="https://apps.apple.com/tw/app/id6467499244">JinTian GT</a> (a precious-metals trading app), plus contributions to an in-house IM client built on Tinode.</p>
+
+  <div class="sub-block">
+    <div class="sub-block-title">Fintech Trading App (<a href="https://www.youtube.com/watch?v=4xdZ6mtfEa0">demo</a>)</div>
+    <ul>
+      <li>Introduced XcodeGen to eliminate persistent <code>.xcodeproj</code> merge conflicts in a multi-developer workflow.</li>
+      <li>Integrated SignalR for real-time quote streaming; resolved UICollectionView cell-update jank during scroll using <code>CADisplayLink + RunLoop</code>.</li>
+      <li>Replaced UITableView with UICollectionView across the codebase to enable richer layouts and more flexible cell composition; maintained and extended the in-house K-Line charting library.</li>
+      <li>Wrote shell scripts to switch between dev / QAT / production environments; implemented in-app live language switching.</li>
+    </ul>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/id6467499244">JinTian GT</a> App (<a href="https://youtu.be/Rh_pZrOLsh0">demo</a>)</div>
+    <ul>
+      <li>Swift / Objective-C mixed-language development; integrated gRPC for data transport.</li>
+      <li>Applied the <a href="http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/">Rate Limiting UITableView/UICollectionView Reloads</a> technique to throttle excessive reloads triggered by high-frequency gRPC updates.</li>
+      <li>Implemented a review-mode UI-hiding mechanism to pass App Store review.</li>
+      <li>Built a CI/CD pipeline with Jenkins + Fastlane; used Firebase App Distribution for dev / QAT builds.</li>
+      <li>Adopted Xcode 15 asset symbol generation; built a JavaScript bridge for bidirectional HTML5 ↔ native communication.</li>
+    </ul>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-title">IM Client (Tinode-based)</div>
+    <ul>
+      <li>Removed Storyboard in favour of fully programmatic UI to enable deep customisation of Tinode's default interface.</li>
+      <li>With no Golang engineer on the team, self-taught Go and read through the Tinode server codebase to understand server behaviour and accurately define the boundaries of IM feature development.</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- 恒遠 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Heng Yuan Technology Co., Ltd.</span>
+    <span class="job-period">Apr 2022 – Jul 2023</span>
+  </div>
+  <div class="job-sub">iOS Engineer　·　Sole iOS engineer on the project (<a href="https://youtu.be/vgyh0lbtPYY">demo</a>)</div>
+  <p>Took over an Objective-C codebase from a mainland China colleague and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming, and chat.</p>
+  <ul>
+    <li><strong>Led ObjC → Swift migration:</strong> Defined a gradual strategy — all new features written in Swift, legacy modules refactored incrementally.</li>
+    <li>Introduced XcodeGen to eliminate Git project-file conflicts; researched Tuist and evaluated both tools.</li>
+    <li><strong>Refactored local HLS playback architecture:</strong> The original approach downloaded m3u8 files locally and served them through GCDWebServer — high maintenance cost. Replaced with a custom <code>AVAssetResourceLoaderDelegate</code>: substitutes <code>file://</code> with a custom <code>local://</code> scheme so AVPlayer cannot handle the request directly, delegates it to the loader, which swaps back to <code>file://</code> and reads the local data. Removed the GCDWebServer dependency and reduced binary size (<a href="https://shinrenpan.github.io/2022-07-13/">reference article</a>).</li>
+    <li>Built comic reader, novel reader, and embedded game pages — all using WebView with bidirectional native communication.</li>
+    <li>Integrated a live-streaming SDK written in Flutter, resolving Flutter module embedding issues and debugging across framework boundaries.</li>
+    <li>Coordinated with a third-party signing vendor for enterprise distribution outside the App Store.</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- 遊戲橘子 BeanFun -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Gamania Group</span>
+    <span class="job-period">Jun 2019 – Feb 2022</span>
+  </div>
+  <div class="job-sub">iOS Contract Engineer</div>
+  <div class="sub-block">
+    <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/beanfun/id1108282446">BeanFun</a> App</div>
+    <ul>
+      <li>Collaborated with the team to introduce Clean Swift architecture, progressively migrating Objective-C modules to Swift.</li>
+      <li>BeanFun loads the majority of its features in WebViews and requires hot-reload support; implemented deep WebView ↔ native bidirectional communication covering JavaScript bridge design, event propagation, and page state synchronisation.</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- 遊戲橘子 teamup -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Gamania Group</span>
+    <span class="job-period">Sep 2018 – Mar 2019</span>
+  </div>
+  <div class="job-sub">iOS Contract Engineer　·　Lead iOS developer</div>
+  <div class="sub-block">
+    <div class="sub-block-title">In-House Enterprise App "teamup!"</div>
+    <p>Internal project management and approval platform supporting instant messaging, digital sign-off, and access control. Used by Gamania's CEO during an Antarctic expedition as a remote management tool (<a href="https://www.bnext.com.tw/article/51537/gamania-teamup">press coverage</a>).</p>
+    <ul>
+      <li>Optimised for low-bandwidth conditions: cached API responses with fmdb for offline use; implemented multi-tier image caching (thumbnail-first display, background download and swap to full resolution) to keep the app functional on slow connections.</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- 緯創 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Wistron ITS</span>
+    <span class="job-period">Aug 2016 – Mar 2018</span>
+  </div>
+  <div class="job-sub">iOS Engineer　·　On-site at Cathay Life Insurance</div>
+  <p>Primary maintainer of the <a href="https://itunes.apple.com/tw/app/id432046643">Cathay Life Insurance</a> app. The codebase was Objective-C; following Cathay's internal decision to adopt Swift, took responsibility for implementing new features in Swift and progressively migrating legacy Objective-C modules.</p>
+</div>
+
+<hr>
+
+<!-- 和特 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Hoter Information</span>
+    <span class="job-period">Mar 2016 – Jun 2016</span>
+  </div>
+  <div class="job-sub">iOS Engineer</div>
+  <p>Developed an in-house hotel workforce management app for staff scheduling, real-time reporting, and check-in. The backend chose SignalR for the chat feature — an uncommon choice at a time when XMPP and MQTT dominated the space — providing first-hand experience with the SignalR protocol. Also implemented geofenced check-in using Core Location.</p>
+</div>
+
+<hr>
+
+<!-- 互聯網 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Internet Mobile Technology</span>
+    <span class="job-period">Apr 2015 – Jan 2016</span>
+  </div>
+  <div class="job-sub">iOS Engineer</div>
+  <p>Built a shopping app centred on a gamification concept inspired by Tap Titans: users earn virtual currency or discount coupons through in-app gameplay, redeemable in the store. Implemented chat using XMPP and built the game module with SpriteKit — the first experience integrating a game engine into an e-commerce app.</p>
+</div>
+
+<hr>
+
+<!-- 早期 -->
+<div class="job">
+  <div class="job-title" style="margin-bottom:5px">Earlier Experience (2010 – 2015)</div>
+  <table>
+    <tr><th style="width:20%">Company</th><th style="width:22%">Period</th><th>Key Work</th></tr>
+    <tr><td>PiPiMy</td><td>Jan 2015 – Mar 2015</td><td>C2C second-hand trading app (Beta)</td></tr>
+    <tr><td>Timeline Technology</td><td>May 2012 – Jun 2014</td><td>Template-based storefront app framework / <a href="https://itunes.apple.com/tw/app/id551945238">coupon app</a></td></tr>
+    <tr><td>JamZoo</td><td>Nov 2012 – Jun 2013</td><td>Migrated "Single Bank" app chat from timer polling to MQTT (following Facebook's adoption of MQTT), resolving lag; built <a href="https://www.youtube.com/watch?v=aail3KJdb4c">offline-capable car rental app</a> and HTML5 e-book WebView</td></tr>
+    <tr><td>Viamedia Mobile Corporation</td><td>Sep 2010 – Feb 2012</td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player interactive app</a>, <a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">mini-games</a>, BLE</td></tr>
+    <tr><td>Sunplus Semiconductor</td><td>Mar 2010 – Jul 2010</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFi hardware accessory app</a>, internet radio, local music playback</td></tr>
+  </table>
+</div>
+
+<!-- EDUCATION -->
+<h2>Education</h2>
+<table>
+  <tr><th style="width:35%">Institution</th><th style="width:40%">Programme</th><th>Period</th></tr>
+  <tr><td>Chaoyang University of Technology</td><td>Information Management (evening programme)</td><td>Sep 2004 – Jan 2007</td></tr>
+  <tr><td>Kao Yuan University (5-year)</td><td>Electronic Engineering</td><td>—</td></tr>
+  <tr><td>Institute for Information Industry</td><td>iOS Development (6-month programme)</td><td>2009</td></tr>
+</table>
+<div class="note" style="margin-top:5px">
+  Graduation project: developed rhythm game <em>Block Ten</em> using cocos2d for iPhone, winning <strong>Gold Award at the 2009 Digital Content Creation Competition (Mobile Game category)</strong>. After graduating, contracted with classmates to build a <a href="https://www.youtube.com/watch?v=npV4b-Z9A4w&t=177s">music app</a>.
+</div>
+<p style="margin-top:6px; font-family:Arial,sans-serif;"><strong>Languages:</strong> Mandarin Chinese (native)　English (technical reading and writing)</p>
+
+</body>
+</html>

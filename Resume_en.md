@@ -1,342 +1,184 @@
+# Joe Pan — Senior iOS Engineer
 
-Name: Joe Pan  
-Mail: shinren.pan@gmail.com  
-GitHub: https://github.com/shinrenpan  
-Blog: https://shinrenpan.github.io
+**Email:** shinren.pan@gmail.com　　**GitHub:** https://github.com/shinrenpan　　**Blog:** https://shinrenpan.github.io
 
-# Summary
+---
 
-iOS Engineer with over 10 years of experience developing iOS apps since 2009. 
+## Summary
 
-Types of apps developed:
-- E-commerce
-- Chat
-- Bluetooth 4.0 or iBeacon
-- 2D games
-- Video streaming
-- Music streaming
-- MFI
+Over **15 years** of hands-on iOS development experience across a wide range of app types — MFi hardware accessories, instant messaging, video streaming, and fintech — participating in every stage of the platform's evolution from pure Objective-C to modern Swift and SwiftUI.
 
-# Skills
+Focused on **architecture design and refactoring**: leading ObjC-to-Swift migrations, designing UIHostingController + SwiftUI hybrid navigation systems, all guided by the principles of maintainability, loose coupling, and full control. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short.
 
-## Programming Languages
+Follows a **native-first philosophy**: Apple's native APIs are always the first choice; third-party dependencies are introduced only when there is no viable native alternative, keeping maintenance overhead and binary size in check.
 
-- Objective-C (2009 - present)
-- Swift (3.0 - present)
+Recently established a systematic **AI-assisted development workflow** (Claude + Skill specs), building reusable architecture reference documents that allow AI to generate spec-compliant code aligned with the project's existing conventions, meaningfully shortening feature development cycles.
 
-## Languages
+---
 
-- Mandarin (Native)
-- English (Intermediate)
+## Skills
 
+### Languages
+- **Swift** 3.0 – present
+- **Objective-C** 2009 – present
 
-## iOS Skills
+### UI
+Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The UIHostingController + SwiftUI hybrid pattern is the current primary architecture. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.
 
-- UI Development
-  - Interface Builder (XIB)
-  - Storyboard
-  - Hardcoded UI
-  - AutoLayout
-  - Autoresizing
-  - [SwiftUI]
-  - Core Animation
-  - [SpriteKit]
+`UIKit` `SwiftUI` `UIHostingController hybrid` `AutoLayout` `Core Animation` `SpriteKit`
 
-- API Communication
-  - URLSession
-  - gRPC with [grpc-swift], [connect-swift]
-  - 3rd-Party Libraries (e.g., [Alamofire])
-  - ~~NSURLConnection~~ (deprecated)
+### Architecture
+Not tied to a single pattern — prioritises maintainability and team adaptability. Has led or contributed to the adoption and refactoring of multiple architectures; designs custom solutions when standard ones prove inadequate.
 
-- Instant Messaging
-  - XMPP with [XMPPFramework]
-  - MQTT with [MQTT-Client-Framework]
-  - WebSocket with [URLSessionWebSocketTask](https://developer.apple.com/documentation/foundation/urlsessionwebsockettask)
-  - Socket with [NSStream]
-  - SignalR with [SignalR-ObjC], [SignalR-Client-Swift](https://github.com/moozzyk/SignalR-Client-Swift)
-  - Live streaming with [ijkplayer], [HaishinKit], [ReplayKit]
-  - VOIP
+`MVC` `MVVM` `Clean Swift` `TCA` `Custom UIHostingController + SwiftUI architecture` `@Observable / @MainActor`
 
-- Databases
-  - CoreData
-  - KeyChain
-  - [FMDB]
-  - [Realm]
-  - NSKeyedArchiver/Unarchiver
-  - Plist
-  - NSUserDefaults
+### Networking
+URLSession is the default (native-first); gRPC is used where the project requires it. Practical experience with Alamofire and other third-party networking libraries.
 
-- Bluetooth
-  - BLE 4.0 or iBeacon integrations
+`URLSession` `gRPC (grpc-swift / connect-swift)` `Alamofire`
 
-- Game Development
-  - [SpriteKit] for 2D game development
+### Real-Time Communication
+Hands-on production experience with all major messaging protocols, covering both text-based communication and live video streaming.
 
-- Version Control
-  - Git
+`WebSocket` `XMPP` `MQTT` `SignalR` `VoIP` `Live Streaming (HaishinKit / ijkplayer / ReplayKit)`
 
-- 3rd-Party Package Management
-  - [Swift Package Manager]
-  - [CocoaPods]
-  - [Carthage]
+### Persistence
+Native solutions are preferred; major third-party options have also been used in production.
 
+`CoreData` `SwiftData` `Keychain` `NSKeyedArchiver` `Realm` `fmdb`
 
-# Work Experience
+### Bluetooth
+`BLE 4.0` `iBeacon`
 
-## DRACO EVOLUTION
+### Toolchain
 
-### iOS Engineer 2025/04 ~ Present
+| Category | Tools |
+|----------|-------|
+| Version Control | Git |
+| Package Management | Swift Package Manager, CocoaPods, Carthage |
+| Project Management | XcodeGen, Tuist |
+| CI / CD | Xcode Cloud, Jenkins, Fastlane, Firebase App Distribution |
+| AI Development | Claude (CLAUDE.md + Skill specs for systematic code generation) |
 
-Developed and maintained the company’s app.
+---
 
-- Assumed ownership of a previously outsourced application built with SwiftUI and [TCA] (The Composable Architecture).
-- Managed the incremental upgrade of the [TCA] library from version 1.10.4 to the latest stable release, ensuring code modernity and stability.
+## Experience
 
-## EVERVICTORY TECHNOLOGY
+### DRACO EVOLUTION
+**Senior iOS Engineer**　　Apr 2025 – Present　　Took over from an outsourced team; sole iOS engineer at the company
 
-### iOS Engineer 2023/09 - 2024/09
+Independently assessed code quality, paid down technical debt, and has been iterating on the product continuously since handover.
 
-Developed and maintained the company’s finance app, [video10]
+- **TCA upgrade and removal:** Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2 (1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2). During routine maintenance and feature development, identified that TCA's built-in Navigation Stack could not accommodate the app's non-standard routing requirements, prompting a gradual architectural rewrite that went live on 18 Sep 2025.
+- **Custom UIHostingController + SwiftUI navigation architecture:** `UIHostingController` serves as the navigation unit while SwiftUI handles rendering. Each feature is owned by a `FeatureHostController` that holds the ViewModel; routing logic stays in the host layer and SwiftUI views remain free of UIKit dependencies, achieving loose coupling and high maintainability. The pattern was codified into internal Skill documents.
+- **Xcode Cloud CI/CD pipeline:** Dev builds distribute automatically to TestFlight internal testers; production builds distribute to TestFlight external testers — fully automated, no manual steps required.
+- **AI-assisted development workflow (Claude + Skill):** Authored `CLAUDE.md` and a suite of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency, etc.) so that Claude generates feature code that conforms to the project's existing architecture, significantly reducing time-to-feature.
 
-- Managed projects with [XcodeGen].
-- Integrated data using [SignalR].
-- Customized UI.
-- Used UICollectionView instead of UITableView for list UI.
-- Wrote scripts to switch between dev, qat, and production environments.
-- Implemented in-app language change.
-- Maintained and expanded the company’s KLine framework.
-- Used CADisplayLink + RunLoop to ensure smooth cell updates during UICollectionView dragging.
+---
 
-Developed and maintained the [金田GT] app, [video9]
+### Evervictory Technology
+**iOS Engineer**　　Sep 2023 – Sep 2024　　Lead developer in a 3-person iOS team; the other two focused on an in-house K-Line library and a separate VPN app
 
-- Developed and maintained using Swift, with mixed integration of 3rd-party Objective-C.
-- Managed projects with [XcodeGen].
-- Implemented hidden UI features for app review.
-- Customized UI.
-- Integrated data using [gRPC].
-- Optimized UITableView to avoid excessive reloads when receiving gRPC data updates, based on [Article2].
-- Set up simple CI/CD using [Jenkins] and [Fastlane].
-- Distributed apps via [Firebase] for dev/qat environments.
-- Introduced Xcode 15’s new [Asset symbol generation].
-- Integrated interactions between HTML5 websites and the app.
-- Managed dependencies with [Swift Package Manager] and [CocoaPods].
+Primary maintainer of a fintech trading platform and [JinTian GT](https://apps.apple.com/tw/app/id6467499244) (a precious-metals trading app), plus contributions to an in-house IM client built on Tinode.
 
-IM Software Development based on [Tinode]
+**Fintech Trading App ([demo](https://www.youtube.com/watch?v=4xdZ6mtfEa0))**
 
-- Removed Storyboard and implemented UI using hardcoded methods for easier customization.
-- Learned Golang and studied server-side code.
+- Introduced XcodeGen to eliminate persistent `.xcodeproj` merge conflicts in a multi-developer workflow.
+- Integrated SignalR for real-time quote streaming; resolved UICollectionView cell-update jank during scroll using `CADisplayLink + RunLoop`.
+- Replaced UITableView with UICollectionView across the codebase to enable richer layouts and more flexible cell composition; maintained and extended the in-house K-Line charting library.
+- Wrote shell scripts to switch between dev / QAT / production environments; implemented in-app live language switching.
 
-## HengYuan Technology Co. Ltd
+**[JinTian GT](https://apps.apple.com/tw/app/id6467499244) App ([demo](https://youtu.be/Rh_pZrOLsh0))**
 
-### iOS Engineer 2022/04 ~ 2023/07
+- Swift / Objective-C mixed-language development; integrated gRPC for data transport.
+- Applied the [Rate Limiting UITableView/UICollectionView Reloads](http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/) technique to throttle excessive reloads triggered by high-frequency gRPC updates.
+- Implemented a review-mode UI-hiding mechanism to pass App Store review.
+- Built a CI/CD pipeline with Jenkins + Fastlane; used Firebase App Distribution for dev / QAT builds.
+- Adopted Xcode 15 asset symbol generation; built a JavaScript bridge for bidirectional HTML5 ↔ native communication.
 
-Developed and maintained the company’s app, which included features such as short/long videos, comics, novels, games, live streaming, and chat. [video8]
+**IM Client (Tinode-based)**
 
-- Took over and maintained a legacy Objective-C project from a colleague in China.
-- Developed new features using Swift while integrating with Objective-C.
-- Introduced [XcodeGen] for project management to avoid frequent Git conflicts.
-- Researched the differences between [Tuist] and [XcodeGen].
-- Led the gradual migration of the project from Objective-C to Swift.
-- Removed unmaintained third-party libraries, replacing them with native APIs.
-Replaced [GCDWebServer] for local m3u8 playback with native APIs, based on [Article1].
-- Wrote scripts for environment switching.
-- Developed a comic reader and a novel reader.
-- Integrated web and app interactions for games.
-- Introduced a live streaming SDK from a partner.
-- Coordinated with a third-party signing service to distribute the app without releasing it to the App Store.
+- Removed Storyboard in favour of fully programmatic UI to enable deep customisation of Tinode's default interface.
+- With no Golang engineer on the team, self-taught Go and read through the Tinode server codebase to understand server behaviour and accurately define the boundaries of IM feature development.
 
-## Gamania Group
+---
 
-### iOS Contract Engineer 2019/06 ~ 2022/02
+### Heng Yuan Technology Co., Ltd.
+**iOS Engineer**　　Apr 2022 – Jul 2023　　Sole iOS engineer on the project ([demo](https://youtu.be/vgyh0lbtPYY))
 
-Developed and maintained the [BeanFun] App.
+Took over an Objective-C codebase and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming, and chat.
 
-- Collaborated with the team to introduce the [Clean Swift] architecture.
-- Fixed existing bugs in Objective-C and refactored code using Swift.
-Developed new features in Swift while integrating with existing Objective-C code.
-- Implemented extensive interactions between WebView and the app.
+- **Led ObjC → Swift migration:** Defined a gradual strategy — all new features written in Swift, legacy modules refactored incrementally.
+- Introduced XcodeGen to eliminate Git project-file conflicts; researched Tuist and evaluated both tools.
+- **Refactored local HLS playback architecture:** The original approach downloaded m3u8 files locally and served them through GCDWebServer — high maintenance cost. Replaced with a custom `AVAssetResourceLoaderDelegate`: substitutes `file://` with a custom `local://` scheme so AVPlayer delegates the request to the loader, which swaps back to `file://` and reads the local data. Removed the GCDWebServer dependency and reduced binary size ([reference article](https://shinrenpan.github.io/2022-07-13/)).
+- Built comic reader, novel reader, and embedded game pages — all using WebView with bidirectional native communication.
+- Integrated a live-streaming SDK written in Flutter, resolving Flutter module embedding issues and debugging across framework boundaries.
+- Coordinated with a third-party signing vendor for enterprise distribution outside the App Store.
 
-### iOS Contract Engineer 2018/09 ~ 2019/03
+---
 
-Developed and maintained an in-house project management app that enabled employees to track project progress.
+### Gamania Group
+**iOS Contract Engineer**　　Jun 2019 – Feb 2022
 
-- Developed and maintained the app using Objective-C.
-- Cached API data using [FMDB] to enable offline functionality.
-- Implemented an image caching mechanism that first displayed thumbnails, then downloaded and displayed full-size images.
+**[BeanFun](https://apps.apple.com/tw/app/beanfun/id1108282446) App**
 
-## Wistron Software
+- Collaborated with the team to introduce Clean Swift architecture, progressively migrating Objective-C modules to Swift.
+- BeanFun loads the majority of its features in WebViews and requires hot-reload support; implemented deep WebView ↔ native bidirectional communication covering JavaScript bridge design, event propagation, and page state synchronisation.
 
-### iOS Engineer 2016/08 ~ 2018/03
+---
 
-Developed and maintained the [國泰人壽] App.
+### Gamania Group
+**iOS Contract Engineer**　　Sep 2018 – Mar 2019　　Lead iOS developer
 
-- Maintained the existing app by fixing Objective-C bugs.
-- Developed new features using Swift.
-- Gradually replaced Objective-C code with Swift through refactoring.
+**In-House Enterprise App "teamup!"**
 
-## HOTELITYIN CO. LTD
+Internal project management and approval platform supporting instant messaging, digital sign-off, and access control. Used by Gamania's CEO during an Antarctic expedition as a remote management tool ([press coverage](https://www.bnext.com.tw/article/51537/gamania-teamup)).
 
-### iOS Engineer 2016/03 ~ 2016/06
+- Optimised for low-bandwidth conditions: cached API responses with fmdb for offline use; implemented multi-tier image caching (thumbnail-first display, background download and swap to full resolution) to keep the app functional on slow connections.
 
-Developed an internal management system app for hotel staff to clock in and send real-time messages.
+---
 
-- Implemented the app using Objective-C.
-- Developed the chat feature based on [SignalR].
-- Implemented location-based clock-in functionality using Core Location.
+### Wistron ITS
+**iOS Engineer**　　Aug 2016 – Mar 2018　　On-site at Cathay Life Insurance
 
-## 互聯網行動科技
+Primary maintainer of the [Cathay Life Insurance](https://itunes.apple.com/tw/app/id432046643) app. The codebase was Objective-C; following Cathay's internal decision to adopt Swift, took responsibility for implementing new features in Swift and progressively migrating legacy Objective-C modules.
 
-### iOS Engineer 2015/04 ~2016/01
+---
 
-Developed and implemented app ideas proposed by the company's founder.
+### Hoter Information
+**iOS Engineer**　　Mar 2016 – Jun 2016
 
-- Implemented the app using Objective-C.
-- Developed a chat feature based on [XMPP].
-- Created game functionality using [SpriteKit].
-- Developed an e-commerce feature.
+Developed an in-house hotel workforce management app for staff scheduling, real-time reporting, and check-in. The backend chose SignalR for the chat feature — an uncommon choice at a time when XMPP and MQTT dominated the space — providing first-hand experience with the SignalR protocol. Also implemented geofenced check-in using Core Location.
 
-## PiPiMy
+---
 
-### iOS Engineer 2015/01 ~ 2015/03
+### Internet Mobile Technology
+**iOS Engineer**　　Apr 2015 – Jan 2016
 
-Developed the beta version of the C2C secondhand trading app [行動拍拍賣].
+Built a shopping app centred on a gamification concept inspired by Tap Titans: users earn virtual currency or discount coupons through in-app gameplay, redeemable in the store. Implemented chat using XMPP and built the game module with SpriteKit — the first experience integrating a game engine into an e-commerce app.
 
-- Implemented the app using Objective-C.
+---
 
-## Hiiir
+### Earlier Experience (2010 – 2015)
 
-### iOS Engineer 2013/09 ~ 2014/06
+| Company | Period | Key Work |
+|---------|--------|----------|
+| PiPiMy | Jan 2015 – Mar 2015 | C2C second-hand trading app (Beta) |
+| Timeline Technology | May 2012 – Jun 2014 | Template-based storefront app framework / [coupon app](https://itunes.apple.com/tw/app/id551945238) |
+| JamZoo | Nov 2012 – Jun 2013 | Migrated "Single Bank" app chat from timer polling to MQTT (following Facebook's adoption of MQTT), resolving lag; built [offline-capable car rental app](https://www.youtube.com/watch?v=aail3KJdb4c) and HTML5 e-book WebView |
+| Viamedia Mobile Corporation | Sep 2010 – Feb 2012 | [Media Player interactive app](https://www.youtube.com/watch?v=Unv4XT5EjNI), [mini-games](https://www.youtube.com/watch?v=fLPyCJoCQWY), BLE |
+| Sunplus Semiconductor | Mar 2010 – Jul 2010 | [MFi hardware accessory app](https://www.youtube.com/watch?v=ZVgwwkCCrUQ), internet radio, local music playback |
 
-Developed a templated app mechanism that allowed businesses to open stores via the app.
+---
 
-- Implemented the app using Objective-C.
-- Developed the templated app architecture.
-- Collaborated with backend developers to establish the templating mechanism.
+## Education
 
-### iOS Engineer 2012/05 ~ 2012/08
+| Institution | Programme | Period |
+|---|---|---|
+| Chaoyang University of Technology | Information Management (evening programme) | Sep 2004 – Jan 2007 |
+| Kao Yuan University (5-year) | Electronic Engineering | — |
+| Institute for Information Industry | iOS Development (6-month programme) | 2009 |
 
-Developed the beta version of [巷弄], a coupon-based app.
+> Graduation project: developed rhythm game *Block Ten* using cocos2d for iPhone, winning **Gold Award at the 2009 Digital Content Creation Competition (Mobile Game category)**. After graduating, contracted with classmates to build a [music app](https://www.youtube.com/watch?v=npV4b-Z9A4w&t=177s).
 
-- Implemented the app using Objective-C.
-- Managed memory and optimized performance.
-- Used Xcode Instruments to detect memory leaks and other issues.
-- Replaced AutoResizing with AutoLayout.
-- Resolved UI performance issues, ensuring smoother interactions.
-
-## JamZoo
-
-### iOS Engineer 2012/11 ~ 2013/06
-
-Developed a variety of apps for clients.
-
-- Implemented apps using Objective-C.
-- Refactored the chat mechanism in the [單身銀行] app, replacing polling with [MQTT].
-- Researched other chat technologies, such as [XMPP] and Socket.
-- Developed an in-house app for a car rental company with offline functionality, [video7].
-- Developed an in-house app for a hairdressing company.
-- Collaborated with ITRI to develop an HTML5-based eBook reader app, integrating UIWebView for communication between the web and app.
-
-## Viamedia Mobile Corporation
-
-### iOS Engineer 2010/09 ~ 2012/02
-
-Developed a variety of apps for clients.
-
-- Implemented apps using Objective-C.
-- Fetched data from APIs using NSURLConnection.
-- Developed interactive apps using the Media Player Framework, [video3].
-- Created games using UIKit, [video4], [video5].
-- Implemented apps with downloadable skin functionality, [video6].
-- Explored additional features like SQLite and BLE.
-
-## KeyStone Semiconductor Corp.
-
-### iOS Engineer 2010/03 ~ 2010/07
-
-Developed and maintained an app connected to MFI hardware, [video2].
-
-- Implemented the app using Objective-C.
-- Developed new features such as online radio and local music playback.
-- Implemented social sharing features for Twitter and Facebook.
-- Gained experience with the [External Accessory Framework].
-
-# Education
-
-## Institute for Information Industry (III)
-
-iOS Development Program (2009 – Six Months)
-
-- Learned the fundamentals of Objective-C.
-- Studied [Cocos2d for iPhone].
-
-At the end of the program, collaborated with two other students to develop a rhythm-based game using [Cocos2d for iPhone], which won the Gold Award in the 2009 Digital Content Series Mobile Game Creation Competition.
-
-Post-graduation, collaborated with academy classmates on contract development for a music app, [video1].
-
-## Chaoyang University of Technology
-
-Bachelor's in Information Management (Evening Program, 2004/09 – 2007/01)
-
-## Kao Yuan University
-
-Associate Degree in Electronic Engineering
-
-
-
-[Article1]: https://shinrenpan.github.io/2022-07-13/
-[Article2]: http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/
-
-[video1]: https://youtu.be/npV4b-Z9A4w?t=177
-[video2]: https://www.youtube.com/watch?v=ZVgwwkCCrUQ
-[video3]: https://www.youtube.com/watch?v=Unv4XT5EjNI
-[video4]: https://www.youtube.com/watch?v=fLPyCJoCQWY
-[video5]: https://www.youtube.com/watch?v=khn3skxDjls
-[video6]: https://www.youtube.com/watch?v=197C74y68Oo
-[video7]: https://www.youtube.com/watch?v=aail3KJdb4c
-[video8]: https://youtu.be/vgyh0lbtPYY
-[video9]: https://youtu.be/Rh_pZrOLsh0
-[video10]: https://www.youtube.com/watch?v=4xdZ6mtfEa0
-
-[MQTT]: http://mqtt.org
-[XMPP]: https://xmpp.org
-[cocos2d for iPhone]: https://zh.wikipedia.org/wiki/Cocos2d
-[SignalR]: https://learn.microsoft.com/zh-tw/aspnet/signalr/overview/getting-started/introduction-to-signalr
-[Clean Swift]: https://clean-swift.com/
-[gRPC]: https://grpc.io
-
-[單身銀行]: https://itunes.apple.com/tw/app/單身銀行-實名制-未婚身份認證/id672623637?mt=8
-[巷弄]: https://itunes.apple.com/tw/app/巷弄-美食餐廳半價優惠/id551945238?mt=8
-[行動拍拍賣]: https://itunes.apple.com/app/id1049599582
-[國泰人壽]: https://itunes.apple.com/tw/app/id432046643
-[BeanFun]: https://apps.apple.com/tw/app/beanfun/id1108282446
-[金田GT]: https://apps.apple.com/tw/app/id6467499244
-
-[External Accessory Framework]: https://developer.apple.com/documentation/externalaccessory
-[SpriteKit]: https://developer.apple.com/library/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/
-[Asset symbol generation]: https://sarunw.com/posts/swift-symbols-for-asset-catalog/
-[Swift Package Manager]: https://www.swift.org/package-manager/
-[ReplayKit]: https://developer.apple.com/documentation/replaykit
-[SwiftUI]: https://developer.apple.com/documentation/swiftui
-
-[fmdb]: https://github.com/ccgus/fmdb
-[XcodeGen]: https://github.com/yonaskolb/XcodeGen
-[Tuist]: https://tuist.io
-[GCDWebServer]: https://github.com/swisspol/GCDWebServer
-[Tinode]: https://github.com/tinode
-[Jenkins]: https://www.jenkins.io
-[Fastlane]: https://fastlane.tools
-[Firebase]: https://firebase.google.com
-[CocoaPods]: https://cocoapods.org
-[Carthage]: https://github.com/Carthage/Carthage
-[Realm]: https://realm.io
-[XMPPFramework]: https://github.com/robbiehanson/XMPPFramework
-[MQTT-Client-Framework]: https://github.com/ckrey/MQTT-Client-Framework
-[NSStream]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSStream_Class/
-[SignalR-ObjC]: https://github.com/DyKnow/SignalR-ObjC
-[Hotelityin]: http://www.hotelityin.com
-[ijkplayer]: https://github.com/bilibili/ijkplayer
-[Alamofire]: https://github.com/Alamofire/Alamofire
-[HaishinKit]: https://github.com/shogo4405/HaishinKit.swift
-[grpc-swift]: https://github.com/grpc/grpc-swift
-[connect-swift]: https://github.com/connectrpc/connect-swift
-[TCA]: https://github.com/pointfreeco/swift-composable-architecture
+**Languages:** Mandarin Chinese (native)　English (technical reading and writing)

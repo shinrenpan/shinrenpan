@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: white;
+    padding: 13mm 14mm;
+  }
+
+  /* Header */
+  .header { margin-bottom: 10px; }
+  .header h1 { font-size: 20pt; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .contact { font-size: 8.5pt; color: #555; }
+  .contact a { color: #555; text-decoration: none; }
+
+  /* Sections */
+  h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #111;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+    margin-top: 13px;
+    margin-bottom: 7px;
+  }
+
+  /* Job blocks */
+  .job { margin-bottom: 10px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .job-title { font-size: 10pt; font-weight: 700; color: #111; }
+  .job-period { font-size: 8.5pt; color: #666; white-space: nowrap; }
+  .job-sub { font-size: 8.5pt; color: #666; margin-bottom: 4px; }
+
+  .sub-block { margin-top: 5px; margin-bottom: 2px; }
+  .sub-block-title { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 2px; }
+
+  p { margin-bottom: 3px; }
+
+  ul { padding-left: 14px; margin-top: 2px; margin-bottom: 2px; }
+  li { margin-bottom: 2px; }
+
+  /* Skills */
+  .skill-block { margin-bottom: 6px; }
+  .skill-label { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 2px; }
+  .skill-desc { font-size: 9pt; color: #333; margin-bottom: 3px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
+  .tag {
+    background: #efefef;
+    color: #333;
+    font-size: 8pt;
+    padding: 1px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 4px 0; font-size: 9pt; }
+  th { background: #f5f5f5; font-weight: 700; text-align: left; padding: 4px 8px; border: 1px solid #ddd; }
+  td { padding: 3px 8px; border: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafafa; }
+
+  /* Note */
+  .note {
+    border-left: 2px solid #aaa;
+    padding-left: 8px;
+    color: #555;
+    font-size: 8.5pt;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* Links — only actual links are blue */
+  a { color: #1a56b0; text-decoration: none; }
+
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 8px 0; }
+  strong { font-weight: 700; }
+  code {
+    background: #efefef;
+    color: #333;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 8.5pt;
+    padding: 0 4px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Joe Pan — 資深 iOS 工程師</h1>
+  <div class="contact">
+    shinren.pan@gmail.com　　
+    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>　　
+    <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<h2>Summary</h2>
+<p>擁有 <strong>15 年以上</strong> iOS 實戰開發經驗，橫跨 MFI 硬體、即時通訊、影音串流、金融交易等多種 App 類型，從純 Objective-C 到現代 Swift / SwiftUI，技術演進的每個階段全程參與並持續應用至今。</p>
+<p style="margin-top:4px">專注於<strong>架構設計與重構</strong>——主導 ObjC → Swift 遷移、設計 UIHostingController + SwiftUI 混合導航架構，皆以「可維護、低耦合、可掌控」為核心目標。不執著於單一架構，進入新團隊後能快速理解並融入現有風格，必要時自行設計更合適的方案。</p>
+<p style="margin-top:4px">秉持<strong>原生優先</strong>哲學：凡 Apple 原生 API 能解決的問題，優先使用原生方案，避免引入不必要的第三方依賴，降低維護風險與 Binary Size。</p>
+<p style="margin-top:4px">近期系統性導入 <strong>AI 輔助工具鏈</strong>（Claude + Skill 規範），建立可複用的架構規範文件，讓 AI 依照專案既有風格快速產出符合規範的代碼，進一步提升個人開發效能。</p>
+
+<!-- 技能 -->
+<h2>技能</h2>
+
+<div class="skill-block">
+  <div class="skill-label">程式語言</div>
+  <div class="tags">
+    <span class="tag">Swift 3.0 ~ 現在</span>
+    <span class="tag">Objective-C 2009 ~ 現在</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">UI</div>
+  <div class="skill-desc">UIKit 與 SwiftUI 皆熟練，能獨立刻出複雜自訂介面；兩者混搭（UIHostingController + SwiftUI）為目前主要架構模式。早期學習 cocos2d for iPhone 奠定 2D 繪圖基礎，延伸為對 SpriteKit 的深度掌握——UIKit / SwiftUI 無法實現的動畫效果，可改以 SpriteKit 完成。</div>
+  <div class="tags">
+    <span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController 混搭</span>
+    <span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">架構</div>
+  <div class="skill-desc">不執著於單一架構，重視可維護性與團隊適應性。曾主導或參與多種架構的導入與重構，必要時自行設計更合適的方案。</div>
+  <div class="tags">
+    <span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span>
+    <span class="tag">UIHostingController + SwiftUI 自研架構</span><span class="tag">@Observable / @MainActor</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">網路</div>
+  <div class="skill-desc">以 URLSession 為主（原生優先），視需求使用 gRPC；Alamofire 等第三方亦有實務使用經驗。</div>
+  <div class="tags">
+    <span class="tag">URLSession</span><span class="tag">gRPC (grpc-swift / connect-swift)</span><span class="tag">Alamofire</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">即時通訊</div>
+  <div class="skill-desc">市面上主流協議皆有實際專案參與經驗，涵蓋文字通訊與影音串流。</div>
+  <div class="tags">
+    <span class="tag">WebSocket</span><span class="tag">XMPP</span><span class="tag">MQTT</span><span class="tag">SignalR</span>
+    <span class="tag">VOIP</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">資料庫</div>
+  <div class="skill-desc">以原生方案為優先，主流第三方亦有使用經驗。</div>
+  <div class="tags">
+    <span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">KeyChain</span>
+    <span class="tag">NSKeyedArchiver</span><span class="tag">Realm</span><span class="tag">fmdb</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">藍芽</div>
+  <div class="tags"><span class="tag">BLE 4.0</span><span class="tag">iBeacon</span></div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">工具鏈</div>
+  <table>
+    <tr><th style="width:22%">類別</th><th>工具</th></tr>
+    <tr><td>版本控制</td><td>Git</td></tr>
+    <tr><td>套件管理</td><td>Swift Package Manager、CocoaPods、Carthage</td></tr>
+    <tr><td>Project 管理</td><td>XcodeGen、Tuist</td></tr>
+    <tr><td>CI / CD</td><td>Xcode Cloud、Jenkins、Fastlane、Firebase App Distribution</td></tr>
+    <tr><td>AI 開發加速</td><td>Claude（CLAUDE.md + Skill 規範，系統化提升 Feature 開發效率）</td></tr>
+  </table>
+</div>
+
+<!-- 工作經歷 -->
+<h2>工作經歷</h2>
+
+<!-- DRACO -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">DRACO EVOLUTION</span>
+    <span class="job-period">2025/04 ~ 迄今</span>
+  </div>
+  <div class="job-sub">資深 iOS 工程師　外包結束後接手，現為公司唯一 iOS 工程師</div>
+  <p>接手外包 App 後，獨立評估程式碼品質、清償技術債，並持續迭代至今。</p>
+  <ul>
+    <li><strong>TCA 升級與移除：</strong>接手時版本為 1.15.2，逐步升級至 1.22.2（1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2）。維護與新增 Feature 期間，發現 TCA 內建 Navigation Stack 無法應對 App 非典型 Route 規則，開始著手重構，測試穩定後於 2025/09/18 正式移除。</li>
+    <li><strong>自研 UIHostingController + SwiftUI 混合導航架構：</strong>以 <code>UIHostingController</code> 為導航單元、SwiftUI 負責畫面渲染——每個 Feature 由 <code>FeatureHostController</code> 持有 ViewModel，路由邏輯集中於 Host 層，SwiftUI 側保持無 UIKit 依賴，達到低耦合、易維護的目標，並整理成內部 Skill 規範。</li>
+    <li><strong>建置 Xcode Cloud CI/CD：</strong>Dev 環境自動分發 TestFlight 內部測試、Production 環境自動分發 TestFlight 外部測試，全程無需人工介入。</li>
+    <li><strong>導入 AI 工具鏈（Claude + Skill）：</strong>建立 <code>CLAUDE.md</code> 與多份 Skill 文件（SwiftUI、ViewModel、HostController、Model、Swift Concurrency 等），讓 Claude 依照專案架構快速產出符合規範的 Feature 代碼，顯著縮短開發週期。</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- 皆凱 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">皆凱科技</span>
+    <span class="job-period">2023/09 ~ 2024/09</span>
+  </div>
+  <div class="job-sub">iOS 工程師　三人 iOS 團隊主力，其餘兩位同事分別專責內部 KLine 套件與另一套 VPN App</div>
+  <p>負責金融交易平台與 <a href="https://apps.apple.com/tw/app/id6467499244">金田GT</a>（貴金屬交易理財 App）兩套 App 的維護，並參與基於 Tinode 的 IM 軟體開發。</p>
+
+  <div class="sub-block">
+    <div class="sub-block-title">金融交易 App（<a href="https://www.youtube.com/watch?v=4xdZ6mtfEa0">參考影片</a>）</div>
+    <ul>
+      <li>導入 XcodeGen 管理 Project，消除多人協作時 <code>.xcodeproj</code> 的 Git 衝突。</li>
+      <li>以 SignalR 介接即時報價資料，搭配 <code>CADisplayLink + RunLoop</code> 解決 UICollectionView 拖動時 Cell 更新卡頓問題。</li>
+      <li>使用 UICollectionView 全面替代 UITableView，統一列表 UI 實作方式，以利後續支援複雜佈局與更彈性的 Cell 組合；維護與新增公司內部 KLine 套件。</li>
+      <li>撰寫 Script 自動切換 dev / qat / production 環境，實作 App 內即時語系切換。</li>
+    </ul>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/id6467499244">金田GT</a> App（<a href="https://youtu.be/Rh_pZrOLsh0">參考影片</a>）</div>
+    <ul>
+      <li>Swift / Objective-C 混編開發，導入 gRPC 介接資料。</li>
+      <li>基於 <a href="http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/">Rate Limiting UITableView/UICollectionView Reloads</a> 的思路，解決高頻 gRPC 資料變動時 reload 過度頻繁的效能問題。</li>
+      <li>實作審核模式下隱藏特定 UI 功能，順利通過 App Store 審查。</li>
+      <li>以 Jenkins + Fastlane 建立 CI/CD，Firebase 分發 dev / qat 測試包。</li>
+      <li>導入 Xcode 15 Asset Symbol Generation；實作 App 與 HTML5 網站雙向互動（JavaScript Bridge）。</li>
+    </ul>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-title">IM 軟體（基於 Tinode）</div>
+    <ul>
+      <li>為大幅客製化 Tinode 預設介面，移除 Storyboard 改以 Hardcoded UI 實作，提升改版彈性。</li>
+      <li>公司缺乏 Golang 工程師，為準確理解 Server 行為、評估 IM 功能邊界，主動學習 Golang 並研讀 Tinode Server 端程式碼。</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- 恒遠 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">恒遠科技</span>
+    <span class="job-period">2022/04 ~ 2023/07</span>
+  </div>
+  <div class="job-sub">iOS 工程師　獨立負責整個 iOS 專案（<a href="https://youtu.be/vgyh0lbtPYY">參考影片</a>）</div>
+  <p>接手大陸同事 Objective-C 專案，主導技術轉型。App 包含短影音、長影音、漫畫、小說、遊戲、直播、聊天等功能。</p>
+  <ul>
+    <li><strong>主導 ObjC → Swift 遷移：</strong>制定漸進式策略，新功能 100% Swift 開發，舊模組逐步重構。</li>
+    <li>導入 XcodeGen 解決 Git Project 衝突；研究 Tuist 並評估兩者差異。</li>
+    <li><strong>重構短影音本地播放架構：</strong>原架構以 GCDWebServer 架設本地伺服器播放下載的 m3u8，維護成本高。重構為自訂 <code>AVAssetResourceLoaderDelegate</code> 方案——將 <code>file://</code> scheme 替換為自訂 <code>local://</code>，讓 AVPlayer 將請求交給 Delegate 處理，Delegate 換回 <code>file://</code> 讀取本地資料回應，移除 GCDWebServer 依賴，降低 Binary Size（<a href="https://shinrenpan.github.io/2022-07-13/">參考文章</a>）。</li>
+    <li>實作漫畫閱讀器、小說閱讀器、遊戲嵌入頁面，三者皆透過 WebView 與 Native 層雙向溝通。</li>
+    <li>導入合作方以 Flutter 開發的直播套件，處理 Flutter module 嵌入 Native 的整合問題，並跨 framework 進行 debug。</li>
+    <li>對接第三方簽名廠商發佈 App（企業內部發佈，繞過 App Store 審核流程）。</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- 遊戲橘子 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">遊戲橘子集團</span>
+    <span class="job-period">2019/06 ~ 2022/02</span>
+  </div>
+  <div class="job-sub">iOS 約聘工程師</div>
+  <div class="sub-block">
+    <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/beanfun/id1108282446">BeanFun</a> App</div>
+    <ul>
+      <li>與團隊共同導入 Clean Swift 架構，將 Objective-C 模組逐步重構為 Swift。</li>
+      <li>BeanFun 大量功能以 WebView 承載並需支援 Hot Reload，深度實作 WebView ↔ Native App 雙向溝通機制，涵蓋 JavaScript Bridge 設計、事件傳遞與頁面狀態同步。</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">遊戲橘子集團</span>
+    <span class="job-period">2018/09 ~ 2019/03</span>
+  </div>
+  <div class="job-sub">iOS 約聘工程師　主力負責 iOS 開發</div>
+  <div class="sub-block">
+    <div class="sub-block-title">In-House 企業管理 App「teamup!」</div>
+    <p>橘子集團內部專案管理與簽核平台，支援即時通訊、線上簽核與門禁整合，曾於執行長劉柏園前進南極期間作為遠端管理工具（<a href="https://www.bnext.com.tw/article/51537/gamania-teamup">參考報導</a>）。</p>
+    <ul>
+      <li>針對低頻寬環境優化：以 fmdb 快取 API 資料實現離線使用，實作多層次圖片快取（縮圖優先展示、背景下載原圖替換），確保弱網下 App 仍可正常操作。</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- 緯創 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">緯創軟體</span>
+    <span class="job-period">2016/08 ~ 2018/03</span>
+  </div>
+  <div class="job-sub">iOS 工程師</div>
+  <p>駐點於國泰人壽，實際為 <a href="https://itunes.apple.com/tw/app/id432046643">國泰人壽 App</a> 主要維護者。原始專案以 Objective-C 開發，因應國泰內部引入 Swift 的技術決策，負責新功能以 Swift 實作，並逐步推動 Objective-C 模組的重構與過渡。</p>
+</div>
+
+<hr>
+
+<!-- 和特 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">和特資訊</span>
+    <span class="job-period">2016/03 ~ 2016/06</span>
+  </div>
+  <div class="job-sub">iOS 工程師</div>
+  <p>參與新創飯店企業管理 App 開發，供飯店員工進行排班管理、即時回報與打卡簽到。後端選用 SignalR 實作聊天功能——在 XMPP、MQTT 為業界主流的時期，為少見的技術選型，從中累積了 SignalR 協議的第一手實作經驗。另實作基於 Core Location 的地點限制打卡機制。</p>
+</div>
+
+<hr>
+
+<!-- 互聯網 -->
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">互聯網行動科技</span>
+    <span class="job-period">2015/04 ~ 2016/01</span>
+  </div>
+  <div class="job-sub">iOS 工程師</div>
+  <p>依老闆構想開發購物商城 App，核心概念是讓使用者透過內嵌遊戲（靈感來自 Tap Titans 玩法）獲得虛擬幣或優惠券，再於商城內使用。基於 XMPP 實作聊天功能，並以 SpriteKit 開發遊戲模組，是第一次將遊戲引擎整合進電商 App 的實戰經驗。</p>
+</div>
+
+<hr>
+
+<!-- 早期 -->
+<div class="job">
+  <div class="job-title" style="margin-bottom:5px">其他早期經歷（2010 ~ 2015）</div>
+  <table>
+    <tr><th style="width:18%">公司</th><th style="width:22%">期間</th><th>主要內容</th></tr>
+    <tr><td>PiPiMy</td><td>2015/01 ~ 2015/03</td><td>C2C 二手交易 App（Beta）</td></tr>
+    <tr><td>時間軸科技</td><td>2012/05 ~ 2014/06</td><td>套版商城 App 架構設計 / <a href="https://itunes.apple.com/tw/app/id551945238">優惠券 App</a></td></tr>
+    <tr><td>JamZoo</td><td>2012/11 ~ 2013/06</td><td>將「單身銀行」App 聊天機制由 Timer Polling 重構為 MQTT（參考 Facebook 採用 MQTT 的技術決策），解決輪詢造成的卡頓問題；另開發<a href="https://www.youtube.com/watch?v=aail3KJdb4c">離線租車 App</a>、HTML5 電子書 WebView</td></tr>
+    <tr><td>汎美達電信</td><td>2010/09 ~ 2012/02</td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player 互動 App</a>、<a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">小遊戲</a>、BLE</td></tr>
+    <tr><td>旭揚半導體</td><td>2010/03 ~ 2010/07</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFI 外接硬體 App</a>、網路電台、Local 音樂播放</td></tr>
+  </table>
+</div>
+
+<!-- 學歷 -->
+<h2>學歷</h2>
+<table>
+  <tr><th style="width:30%">學校 / 機構</th><th style="width:40%">科系 / 課程</th><th>期間</th></tr>
+  <tr><td>朝陽科技大學</td><td>資訊管理系（夜間部）</td><td>2004/09 ~ 2007/01</td></tr>
+  <tr><td>高苑專校</td><td>電子工程科（五專）</td><td>—</td></tr>
+  <tr><td>資策會數位內容學院</td><td>iOS 開發課程（六個月）</td><td>2009</td></tr>
+</table>
+<div class="note" style="margin-top:5px">
+  結業作品：以 cocos2d for iPhone 開發音樂節奏遊戲《擋十個》，榮獲 <strong>2009 數位內容系列競賽手機遊戲創作組金獎</strong>。結業後與同學接案開發 <a href="https://www.youtube.com/watch?v=npV4b-Z9A4w&t=177s">音樂 App</a>。
+</div>
+<p style="margin-top:6px"><strong>語言：</strong>中文（母語）　英文（讀寫可應對技術文件）</p>
+
+
+
+</body>
+</html>
