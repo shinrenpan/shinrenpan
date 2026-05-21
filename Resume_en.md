@@ -53,6 +53,11 @@ Native solutions are preferred; major third-party options have also been used in
 ### Bluetooth
 `CoreBluetooth` `iBeacon`
 
+### Healthcare Integration
+Reading and writing FHIR R4 standard resources; SMART on FHIR OAuth 2.0 Authorization Code Flow; Apple FHIRModels parsing. ([FhirDemo](https://github.com/shinrenpan/FhirDemo))
+
+`FHIR R4` `SMART on FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
+
 ### Toolchain
 
 | Category | Tools |
