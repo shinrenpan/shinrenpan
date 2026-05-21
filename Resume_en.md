@@ -8,11 +8,9 @@
 
 Over **15 years** of hands-on iOS development experience across a wide range of app types — MFi hardware accessories, instant messaging, video streaming, and fintech — participating in every stage of the platform's evolution from pure Objective-C to modern Swift and SwiftUI.
 
-Focused on **architecture design and refactoring**: leading ObjC-to-Swift migrations, designing UIHostingController + SwiftUI hybrid navigation systems, all guided by the principles of maintainability, loose coupling, and full control. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short.
+Focused on **architecture design**, with a core conviction that architecture should be grounded in Apple's own frameworks — studying the design intent behind UIKit, SwiftUI, and Swift Concurrency, then building loosely coupled, maintainable solutions from that foundation rather than adopting third-party frameworks that diverge from the platform's native model. This **native-first** philosophy extends to dependency management: Apple's native APIs are always the first choice, keeping maintenance overhead and binary size in check. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short; MVVMC is a direct expression of this conviction.
 
-Follows a **native-first philosophy**: Apple's native APIs are always the first choice; third-party dependencies are introduced only when there is no viable native alternative, keeping maintenance overhead and binary size in check.
-
-Recently established a systematic **AI-assisted development workflow** (Claude + Skill specs), building reusable architecture reference documents that allow AI to generate spec-compliant code aligned with the project's existing conventions, meaningfully shortening feature development cycles.
+Years of hands-on experience across nearly every common app feature type means problems are diagnosed fast — most scenarios have been encountered before, making it possible to zero in on the key information and reach a viable solution quickly.
 
 ---
 
@@ -23,14 +21,19 @@ Recently established a systematic **AI-assisted development workflow** (Claude +
 - **Objective-C** 2009 – present
 
 ### UI
-Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The UIHostingController + SwiftUI hybrid pattern is the current primary architecture. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.
+Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The two are combined as the core foundation of the MVVMC architecture, with `UIHostingController` as the navigation unit and SwiftUI handling rendering. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.
 
 `UIKit` `SwiftUI` `UIHostingController hybrid` `AutoLayout` `Core Animation` `SpriteKit`
 
 ### Architecture
 Not tied to a single pattern — prioritises maintainability and team adaptability. Has led or contributed to the adoption and refactoring of multiple architectures; designs custom solutions when standard ones prove inadequate.
 
-`MVC` `MVVM` `Clean Swift` `TCA` `Custom UIHostingController + SwiftUI architecture` `@Observable / @MainActor`
+`MVC` `MVVM` `Clean Swift` `TCA` `MVVMC (custom)` `@Observable / @MainActor`
+
+### Swift Concurrency
+Migrated an existing Swift 5+ codebase to full Swift 6 readiness through systematic adoption of Swift Concurrency.
+
+`async/await` `@MainActor` `actor` `Sendable` `Task / TaskGroup`
 
 ### Networking
 URLSession is the default (native-first); gRPC is used where the project requires it. Practical experience with Alamofire and other third-party networking libraries.
@@ -48,7 +51,7 @@ Native solutions are preferred; major third-party options have also been used in
 `CoreData` `SwiftData` `Keychain` `NSKeyedArchiver` `Realm` `fmdb`
 
 ### Bluetooth
-`BLE 4.0` `iBeacon`
+`CoreBluetooth` `iBeacon`
 
 ### Toolchain
 
@@ -65,13 +68,15 @@ Native solutions are preferred; major third-party options have also been used in
 ## Experience
 
 ### DRACO EVOLUTION
-**Senior iOS Engineer**　　Apr 2025 – Present　　Took over from an outsourced team; sole iOS engineer at the company
+**Senior iOS Engineer**　　Apr 2025 – Jun 2026　　Took over from an outsourced team; sole iOS engineer at the company
 
-Independently assessed code quality, paid down technical debt, and has been iterating on the product continuously since handover.
+Independently assessed code quality, paid down technical debt, and led the technical architecture evolution.
 
 - **TCA upgrade and removal:** Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2 (1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2). During routine maintenance and feature development, identified that TCA's built-in Navigation Stack could not accommodate the app's non-standard routing requirements, prompting a gradual architectural rewrite that went live on 18 Sep 2025.
-- **Custom UIHostingController + SwiftUI navigation architecture:** `UIHostingController` serves as the navigation unit while SwiftUI handles rendering. Each feature is owned by a `FeatureHostController` that holds the ViewModel; routing logic stays in the host layer and SwiftUI views remain free of UIKit dependencies, achieving loose coupling and high maintainability. The pattern was codified into internal Skill documents.
+- **Custom MVVMC architecture ([GitHub](https://github.com/shinrenpan/MVVMC)):** After removing TCA, found that SwiftUI's native NavigationStack still couldn't handle complex non-standard routing (e.g. simultaneously dismissing a checkout flow, switching tabs, and clearing a navigation stack). Combined with a deliberate decision not to base the entire codebase on a third-party architecture framework, drew on concepts from TCA and MVI to design MVVMC from scratch in native Swift — extending MVVM with a HostController layer (C): M handles State / Domain Models / DTOs; VM uses `@Observable @MainActor` with a single entry point (`doAction`) for business logic; V is pure SwiftUI with zero navigation or business logic; C (`UIHostingController`) is the sole Router with all navigation centralised through `AppRouter.shared`. Open-sourced with an MCP Server so Claude Code can access the architecture spec from any project.
+- **Swift 5 → Ready for Swift 6 migration:** Inherited a Swift 5+ codebase and systematically introduced `async/await`, `@MainActor`, `actor`, and `Sendable`, completing the Swift 6 compatibility migration in parallel with the TCA removal and MVVMC refactor.
 - **Xcode Cloud CI/CD pipeline:** Dev builds distribute automatically to TestFlight internal testers; production builds distribute to TestFlight external testers — fully automated, no manual steps required.
+- **US App Store release:** Published exclusively on the US App Store to comply with SEC regulations; subsequently taken down following an API shutdown.
 - **AI-assisted development workflow (Claude + Skill):** Authored `CLAUDE.md` and a suite of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency, etc.) so that Claude generates feature code that conforms to the project's existing architecture, significantly reducing time-to-feature.
 
 ---
@@ -168,6 +173,18 @@ Built a shopping app centred on a gamification concept inspired by Tap Titans: u
 | JamZoo | Nov 2012 – Jun 2013 | Migrated "Single Bank" app chat from timer polling to MQTT (following Facebook's adoption of MQTT), resolving lag; built [offline-capable car rental app](https://www.youtube.com/watch?v=aail3KJdb4c) and HTML5 e-book WebView |
 | Viamedia Mobile Corporation | Sep 2010 – Feb 2012 | [Media Player interactive app](https://www.youtube.com/watch?v=Unv4XT5EjNI), [mini-games](https://www.youtube.com/watch?v=fLPyCJoCQWY), BLE |
 | Sunplus Semiconductor | Mar 2010 – Jul 2010 | [MFi hardware accessory app](https://www.youtube.com/watch?v=ZVgwwkCCrUQ), internet radio, local music playback |
+
+---
+
+## Projects
+
+### MVVMC　　[GitHub](https://github.com/shinrenpan/MVVMC)
+
+A four-layer iOS architecture (M / VM / V / C) designed to overcome the limitations of SwiftUI's native navigation. Uses `UIHostingController` as the navigation unit and centralises all routing through `AppRouter.shared`, keeping SwiftUI views free of any navigation dependencies. Includes a runnable Demo project and an MCP Server for Claude Code integration.
+
+### WebParser　　[GitHub](https://github.com/shinrenpan/WebParser)
+
+A Swift Package for web parsing built on WKWebView off-screen rendering, designed for dynamic pages that require JavaScript execution (SPAs, dynamic DOM). Exposes a type-safe generic Mapper interface (JSON → `Decodable`, custom Regex extraction), fully Swift 6 strict concurrency compliant, tested with Swift Testing, distributed via SPM with GitHub Actions CI.
 
 ---
 

@@ -81,7 +81,7 @@
     margin-top: 4px;
   }
 
-  /* Links — only actual links are blue */
+  /* Links */
   a { color: #1a56b0; text-decoration: none; }
 
   hr { border: none; border-top: 1px solid #e0e0e0; margin: 8px 0; }
@@ -89,7 +89,7 @@
   code {
     background: #efefef;
     color: #333;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 8.5pt;
     padding: 0 4px;
     border-radius: 2px;
@@ -102,18 +102,17 @@
 <div class="header">
   <h1>Joe Pan — 資深 iOS 工程師</h1>
   <div class="contact">
-    shinren.pan@gmail.com　　
-    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>　　
+    shinren.pan@gmail.com
+    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>
     <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>
   </div>
 </div>
 
 <!-- SUMMARY -->
 <h2>Summary</h2>
-<p>擁有 <strong>15 年以上</strong> iOS 實戰開發經驗，橫跨 MFI 硬體、即時通訊、影音串流、金融交易等多種 App 類型，從純 Objective-C 到現代 Swift / SwiftUI，技術演進的每個階段全程參與並持續應用至今。</p>
-<p style="margin-top:4px">專注於<strong>架構設計與重構</strong>——主導 ObjC → Swift 遷移、設計 UIHostingController + SwiftUI 混合導航架構，皆以「可維護、低耦合、可掌控」為核心目標。不執著於單一架構，進入新團隊後能快速理解並融入現有風格，必要時自行設計更合適的方案。</p>
-<p style="margin-top:4px">秉持<strong>原生優先</strong>哲學：凡 Apple 原生 API 能解決的問題，優先使用原生方案，避免引入不必要的第三方依賴，降低維護風險與 Binary Size。</p>
-<p style="margin-top:4px">近期系統性導入 <strong>AI 輔助工具鏈</strong>（Claude + Skill 規範），建立可複用的架構規範文件，讓 AI 依照專案既有風格快速產出符合規範的代碼，進一步提升個人開發效能。</p>
+<p>擁有 <strong>15 年以上</strong> iOS 實戰開發經驗，橫跨 MFi 硬體、即時通訊、影音串流、金融交易等多種 App 類型，從純 Objective-C 到現代 Swift / SwiftUI，技術演進的每個階段全程參與並持續應用至今。</p>
+<p style="margin-top:4px">專注於<strong>架構設計</strong>，核心立場是以 Apple 官方框架為研究基礎——深入理解 UIKit、SwiftUI、Swift Concurrency 的設計意圖，在此基礎上設計低耦合、可維護的方案，而非追隨偏離原生的第三方 Framework。這個<strong>原生優先</strong>的哲學同樣體現在依賴管理上：凡 Apple API 能解決的問題，優先選用原生方案，降低維護風險與 Binary Size。不執著於單一架構，進入新團隊後能快速融入現有風格，必要時自行設計更合適的方案；MVVMC 即是這個立場下的具體實踐。</p>
+<p style="margin-top:4px">多年橫跨各類 App 類型所累積的功能廣度，讓問題判斷速度極快——大多數常見功能皆有實作前例，能迅速聚焦關鍵資訊，快速找到可行解法。</p>
 
 <!-- 技能 -->
 <h2>技能</h2>
@@ -128,7 +127,7 @@
 
 <div class="skill-block">
   <div class="skill-label">UI</div>
-  <div class="skill-desc">UIKit 與 SwiftUI 皆熟練，能獨立刻出複雜自訂介面；兩者混搭（UIHostingController + SwiftUI）為目前主要架構模式。早期學習 cocos2d for iPhone 奠定 2D 繪圖基礎，延伸為對 SpriteKit 的深度掌握——UIKit / SwiftUI 無法實現的動畫效果，可改以 SpriteKit 完成。</div>
+  <div class="skill-desc">UIKit 與 SwiftUI 皆熟練，能獨立刻出複雜自訂介面；兩者混搭為 MVVMC 架構的核心基礎，以 <code>UIHostingController</code> 作為導航單元、SwiftUI 負責畫面渲染。早期學習 cocos2d for iPhone 奠定 2D 繪圖基礎，延伸為對 SpriteKit 的深度掌握——UIKit / SwiftUI 無法實現的動畫效果，可改以 SpriteKit 完成。</div>
   <div class="tags">
     <span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController 混搭</span>
     <span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span>
@@ -140,7 +139,16 @@
   <div class="skill-desc">不執著於單一架構，重視可維護性與團隊適應性。曾主導或參與多種架構的導入與重構，必要時自行設計更合適的方案。</div>
   <div class="tags">
     <span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span>
-    <span class="tag">UIHostingController + SwiftUI 自研架構</span><span class="tag">@Observable / @MainActor</span>
+    <span class="tag">MVVMC（自研）</span><span class="tag">@Observable / @MainActor</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Swift Concurrency</div>
+  <div class="skill-desc">接手既有 Swift 5+ 專案，系統性導入 Swift Concurrency 並重構至 Ready for Swift 6 相容。</div>
+  <div class="tags">
+    <span class="tag">async/await</span><span class="tag">@MainActor</span><span class="tag">actor</span>
+    <span class="tag">Sendable</span><span class="tag">Task / TaskGroup</span>
   </div>
 </div>
 
@@ -157,7 +165,7 @@
   <div class="skill-desc">市面上主流協議皆有實際專案參與經驗，涵蓋文字通訊與影音串流。</div>
   <div class="tags">
     <span class="tag">WebSocket</span><span class="tag">XMPP</span><span class="tag">MQTT</span><span class="tag">SignalR</span>
-    <span class="tag">VOIP</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span>
+    <span class="tag">VoIP</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span>
   </div>
 </div>
 
@@ -165,14 +173,14 @@
   <div class="skill-label">資料庫</div>
   <div class="skill-desc">以原生方案為優先，主流第三方亦有使用經驗。</div>
   <div class="tags">
-    <span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">KeyChain</span>
+    <span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">Keychain</span>
     <span class="tag">NSKeyedArchiver</span><span class="tag">Realm</span><span class="tag">fmdb</span>
   </div>
 </div>
 
 <div class="skill-block">
   <div class="skill-label">藍芽</div>
-  <div class="tags"><span class="tag">BLE 4.0</span><span class="tag">iBeacon</span></div>
+  <div class="tags"><span class="tag">CoreBluetooth</span><span class="tag">iBeacon</span></div>
 </div>
 
 <div class="skill-block">
@@ -194,14 +202,16 @@
 <div class="job">
   <div class="job-header">
     <span class="job-title">DRACO EVOLUTION</span>
-    <span class="job-period">2025/04 ~ 迄今</span>
+    <span class="job-period">2025/04 ~ 2026/06</span>
   </div>
-  <div class="job-sub">資深 iOS 工程師　外包結束後接手，現為公司唯一 iOS 工程師</div>
-  <p>接手外包 App 後，獨立評估程式碼品質、清償技術債，並持續迭代至今。</p>
+  <div class="job-sub">資深 iOS 工程師　外包結束後接手，擔任公司唯一 iOS 工程師</div>
+  <p>接手外包 App 後，獨立評估程式碼品質、清償技術債，主導技術架構演進。</p>
   <ul>
     <li><strong>TCA 升級與移除：</strong>接手時版本為 1.15.2，逐步升級至 1.22.2（1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2）。維護與新增 Feature 期間，發現 TCA 內建 Navigation Stack 無法應對 App 非典型 Route 規則，開始著手重構，測試穩定後於 2025/09/18 正式移除。</li>
-    <li><strong>自研 UIHostingController + SwiftUI 混合導航架構：</strong>以 <code>UIHostingController</code> 為導航單元、SwiftUI 負責畫面渲染——每個 Feature 由 <code>FeatureHostController</code> 持有 ViewModel，路由邏輯集中於 Host 層，SwiftUI 側保持無 UIKit 依賴，達到低耦合、易維護的目標，並整理成內部 Skill 規範。</li>
+    <li><strong>自研 MVVMC 架構（<a href="https://github.com/shinrenpan/MVVMC">GitHub</a>）：</strong>移除 TCA 後，發現 SwiftUI 原生 NavigationStack 仍無法應對複雜的非典型 Route（如結帳後同時 dismiss、切 Tab、清 stack），加上不希望整個 codebase 的架構命脈寄託於第三方套件，決定借鑒 TCA / MVI 設計概念以原生 Swift 自行設計——在 MVVM 基礎上加入 HostController（C 層）：M 層管 State / Domain Models / DTOs、VM 層以 <code>@Observable @MainActor</code> 單一入口（<code>doAction</code>）處理業務邏輯、V 層為零導航邏輯的純 SwiftUI、C 層（<code>UIHostingController</code>）擔任唯一 Router，所有導航透過 <code>AppRouter.shared</code> 集中管理。架構整理為開源 repo，並附帶 MCP Server，讓 Claude Code 在任何專案都能取得規範。</li>
+    <li><strong>Swift 5 → Ready for Swift 6 重構：</strong>接手時 codebase 為 Swift 5+，系統性導入 <code>async/await</code>、<code>@MainActor</code>、<code>actor</code>、<code>Sendable</code>，在移除 TCA、重構 MVVMC 的過程中同步完成 Swift 6 相容遷移。</li>
     <li><strong>建置 Xcode Cloud CI/CD：</strong>Dev 環境自動分發 TestFlight 內部測試、Production 環境自動分發 TestFlight 外部測試，全程無需人工介入。</li>
+    <li><strong>App Store 上架（美國）：</strong>因應 SEC 合規要求僅於美國市場上架；後因 API 停止服務，App 暫時下架。</li>
     <li><strong>導入 AI 工具鏈（Claude + Skill）：</strong>建立 <code>CLAUDE.md</code> 與多份 Skill 文件（SwiftUI、ViewModel、HostController、Model、Swift Concurrency 等），讓 Claude 依照專案架構快速產出符合規範的 Feature 代碼，顯著縮短開發週期。</li>
   </ul>
 </div>
@@ -269,7 +279,7 @@
 
 <hr>
 
-<!-- 遊戲橘子 -->
+<!-- 遊戲橘子 BeanFun -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">遊戲橘子集團</span>
@@ -287,6 +297,7 @@
 
 <hr>
 
+<!-- 遊戲橘子 teamup -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">遊戲橘子集團</span>
@@ -349,8 +360,27 @@
     <tr><td>時間軸科技</td><td>2012/05 ~ 2014/06</td><td>套版商城 App 架構設計 / <a href="https://itunes.apple.com/tw/app/id551945238">優惠券 App</a></td></tr>
     <tr><td>JamZoo</td><td>2012/11 ~ 2013/06</td><td>將「單身銀行」App 聊天機制由 Timer Polling 重構為 MQTT（參考 Facebook 採用 MQTT 的技術決策），解決輪詢造成的卡頓問題；另開發<a href="https://www.youtube.com/watch?v=aail3KJdb4c">離線租車 App</a>、HTML5 電子書 WebView</td></tr>
     <tr><td>汎美達電信</td><td>2010/09 ~ 2012/02</td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player 互動 App</a>、<a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">小遊戲</a>、BLE</td></tr>
-    <tr><td>旭揚半導體</td><td>2010/03 ~ 2010/07</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFI 外接硬體 App</a>、網路電台、Local 音樂播放</td></tr>
+    <tr><td>旭揚半導體</td><td>2010/03 ~ 2010/07</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFi 外接硬體 App</a>、網路電台、Local 音樂播放</td></tr>
   </table>
+</div>
+
+<!-- Projects -->
+<h2>Projects</h2>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">MVVMC</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/MVVMC">GitHub</a></span>
+  </div>
+  <p>針對 SwiftUI 原生導航的限制自行設計的四層 iOS 架構（M / VM / V / C），以 <code>UIHostingController</code> 為導航單元，<code>AppRouter.shared</code> 統一管理所有路由邏輯，SwiftUI View 保持零導航依賴。附帶可執行的 Demo 專案與 MCP Server（供 Claude Code 在任何專案取得架構規範）。</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">WebParser</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/WebParser">GitHub</a></span>
+  </div>
+  <p>基於 WKWebView 離屏渲染的網頁解析 Swift Package，專為需要執行 JavaScript 的動態網頁（SPA、動態 DOM）設計。以泛型 Mapper 提供類型安全的解析介面（JSON → <code>Decodable</code>、自訂 Regex 擷取），全面採用 Swift 6 strict concurrency、Swift Testing 框架，GitHub Actions CI，透過 SPM 發佈。</p>
 </div>
 
 <!-- 學歷 -->
@@ -365,8 +395,6 @@
   結業作品：以 cocos2d for iPhone 開發音樂節奏遊戲《擋十個》，榮獲 <strong>2009 數位內容系列競賽手機遊戲創作組金獎</strong>。結業後與同學接案開發 <a href="https://www.youtube.com/watch?v=npV4b-Z9A4w&t=177s">音樂 App</a>。
 </div>
 <p style="margin-top:6px"><strong>語言：</strong>中文（母語）　英文（讀寫可應對技術文件）</p>
-
-
 
 </body>
 </html>

@@ -108,8 +108,8 @@
 <div class="header">
   <h1>Joe Pan — Senior iOS Engineer</h1>
   <div class="contact">
-    shinren.pan@gmail.com　　
-    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>　　
+    shinren.pan@gmail.com
+    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>
     <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>
   </div>
 </div>
@@ -117,9 +117,8 @@
 <!-- SUMMARY -->
 <h2>Summary</h2>
 <p>Over <strong>15 years</strong> of hands-on iOS development experience across a wide range of app types — MFi hardware accessories, instant messaging, video streaming, and fintech — participating in every stage of the platform's evolution from pure Objective-C to modern Swift and SwiftUI.</p>
-<p style="margin-top:4px">Focused on <strong>architecture design and refactoring</strong>: leading ObjC-to-Swift migrations, designing UIHostingController + SwiftUI hybrid navigation systems, all guided by the principles of maintainability, loose coupling, and full control. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short.</p>
-<p style="margin-top:4px">Follows a <strong>native-first philosophy</strong>: Apple's native APIs are always the first choice; third-party dependencies are introduced only when there is no viable native alternative, keeping maintenance overhead and binary size in check.</p>
-<p style="margin-top:4px">Recently established a systematic <strong>AI-assisted development workflow</strong> (Claude + Skill specs), building reusable architecture reference documents that allow AI to generate spec-compliant code aligned with the project's existing conventions, meaningfully shortening feature development cycles.</p>
+<p style="margin-top:4px">Focused on <strong>architecture design</strong>, with a core conviction that architecture should be grounded in Apple's own frameworks — studying the design intent behind UIKit, SwiftUI, and Swift Concurrency, then building loosely coupled, maintainable solutions from that foundation rather than adopting third-party frameworks that diverge from the platform's native model. This <strong>native-first</strong> philosophy extends to dependency management: Apple's native APIs are always the first choice, keeping maintenance overhead and binary size in check. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short; MVVMC is a direct expression of this conviction.</p>
+<p style="margin-top:4px">Years of hands-on experience across nearly every common app feature type means problems are diagnosed fast — most scenarios have been encountered before, making it possible to zero in on the key information and reach a viable solution quickly.</p>
 
 <!-- SKILLS -->
 <h2>Skills</h2>
@@ -134,7 +133,7 @@
 
 <div class="skill-block">
   <div class="skill-label">UI</div>
-  <div class="skill-desc">Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The UIHostingController + SwiftUI hybrid pattern is the current primary architecture. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.</div>
+  <div class="skill-desc">Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The two are combined as the core foundation of the MVVMC architecture, with <code>UIHostingController</code> as the navigation unit and SwiftUI handling rendering. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.</div>
   <div class="tags">
     <span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController hybrid</span>
     <span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span>
@@ -146,7 +145,16 @@
   <div class="skill-desc">Not tied to a single pattern — prioritises maintainability and team adaptability. Has led or contributed to the adoption and refactoring of multiple architectures; designs custom solutions when standard ones prove inadequate.</div>
   <div class="tags">
     <span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span>
-    <span class="tag">Custom UIHostingController + SwiftUI architecture</span><span class="tag">@Observable / @MainActor</span>
+    <span class="tag">MVVMC (custom)</span><span class="tag">@Observable / @MainActor</span>
+  </div>
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Swift Concurrency</div>
+  <div class="skill-desc">Migrated an existing Swift 5+ codebase to full Swift 6 readiness through systematic adoption of Swift Concurrency.</div>
+  <div class="tags">
+    <span class="tag">async/await</span><span class="tag">@MainActor</span><span class="tag">actor</span>
+    <span class="tag">Sendable</span><span class="tag">Task / TaskGroup</span>
   </div>
 </div>
 
@@ -178,7 +186,7 @@
 
 <div class="skill-block">
   <div class="skill-label">Bluetooth</div>
-  <div class="tags"><span class="tag">BLE 4.0</span><span class="tag">iBeacon</span></div>
+  <div class="tags"><span class="tag">CoreBluetooth</span><span class="tag">iBeacon</span></div>
 </div>
 
 <div class="skill-block">
@@ -200,14 +208,16 @@
 <div class="job">
   <div class="job-header">
     <span class="job-title">DRACO EVOLUTION</span>
-    <span class="job-period">Apr 2025 – Present</span>
+    <span class="job-period">Apr 2025 – Jun 2026</span>
   </div>
   <div class="job-sub">Senior iOS Engineer　·　Took over from an outsourced team; sole iOS engineer at the company</div>
-  <p>Independently assessed code quality, paid down technical debt, and has been iterating on the product continuously since handover.</p>
+  <p>Independently assessed code quality, paid down technical debt, and led the technical architecture evolution.</p>
   <ul>
     <li><strong>TCA upgrade and removal:</strong> Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2 (1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2). During routine maintenance and feature development, identified that TCA's built-in Navigation Stack could not accommodate the app's non-standard routing requirements, prompting a gradual architectural rewrite that went live on 18 Sep 2025.</li>
-    <li><strong>Custom UIHostingController + SwiftUI navigation architecture:</strong> <code>UIHostingController</code> serves as the navigation unit while SwiftUI handles rendering. Each feature is owned by a <code>FeatureHostController</code> that holds the ViewModel; routing logic stays in the host layer and SwiftUI views remain free of UIKit dependencies, achieving loose coupling and high maintainability. The pattern was codified into internal Skill documents.</li>
+    <li><strong>Custom MVVMC architecture (<a href="https://github.com/shinrenpan/MVVMC">GitHub</a>):</strong> After removing TCA, found that SwiftUI's native NavigationStack still couldn't handle complex non-standard routing (e.g. simultaneously dismissing a checkout flow, switching tabs, and clearing a navigation stack). Combined with a deliberate decision not to base the entire codebase on a third-party architecture framework, drew on concepts from TCA and MVI to design MVVMC from scratch in native Swift — extending MVVM with a HostController layer (C): M handles State / Domain Models / DTOs; VM uses <code>@Observable @MainActor</code> with a single entry point (<code>doAction</code>) for business logic; V is pure SwiftUI with zero navigation or business logic; C (<code>UIHostingController</code>) is the sole Router with all navigation centralised through <code>AppRouter.shared</code>. Open-sourced with an MCP Server so Claude Code can access the architecture spec from any project.</li>
+    <li><strong>Swift 5 → Ready for Swift 6 migration:</strong> Inherited a Swift 5+ codebase and systematically introduced <code>async/await</code>, <code>@MainActor</code>, <code>actor</code>, and <code>Sendable</code>, completing the Swift 6 compatibility migration in parallel with the TCA removal and MVVMC refactor.</li>
     <li><strong>Xcode Cloud CI/CD pipeline:</strong> Dev builds distribute automatically to TestFlight internal testers; production builds distribute to TestFlight external testers — fully automated, no manual steps required.</li>
+    <li><strong>US App Store release:</strong> Published exclusively on the US App Store to comply with SEC regulations; subsequently taken down following an API shutdown.</li>
     <li><strong>AI-assisted development workflow (Claude + Skill):</strong> Authored <code>CLAUDE.md</code> and a suite of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency, etc.) so that Claude generates feature code that conforms to the project's existing architecture, significantly reducing time-to-feature.</li>
   </ul>
 </div>
@@ -262,11 +272,11 @@
     <span class="job-period">Apr 2022 – Jul 2023</span>
   </div>
   <div class="job-sub">iOS Engineer　·　Sole iOS engineer on the project (<a href="https://youtu.be/vgyh0lbtPYY">demo</a>)</div>
-  <p>Took over an Objective-C codebase from a mainland China colleague and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming, and chat.</p>
+  <p>Took over an Objective-C codebase and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming, and chat.</p>
   <ul>
     <li><strong>Led ObjC → Swift migration:</strong> Defined a gradual strategy — all new features written in Swift, legacy modules refactored incrementally.</li>
     <li>Introduced XcodeGen to eliminate Git project-file conflicts; researched Tuist and evaluated both tools.</li>
-    <li><strong>Refactored local HLS playback architecture:</strong> The original approach downloaded m3u8 files locally and served them through GCDWebServer — high maintenance cost. Replaced with a custom <code>AVAssetResourceLoaderDelegate</code>: substitutes <code>file://</code> with a custom <code>local://</code> scheme so AVPlayer cannot handle the request directly, delegates it to the loader, which swaps back to <code>file://</code> and reads the local data. Removed the GCDWebServer dependency and reduced binary size (<a href="https://shinrenpan.github.io/2022-07-13/">reference article</a>).</li>
+    <li><strong>Refactored local HLS playback architecture:</strong> The original approach downloaded m3u8 files locally and served them through GCDWebServer — high maintenance cost. Replaced with a custom <code>AVAssetResourceLoaderDelegate</code>: substitutes <code>file://</code> with a custom <code>local://</code> scheme so AVPlayer delegates the request to the loader, which swaps back to <code>file://</code> and reads the local data. Removed the GCDWebServer dependency and reduced binary size (<a href="https://shinrenpan.github.io/2022-07-13/">reference article</a>).</li>
     <li>Built comic reader, novel reader, and embedded game pages — all using WebView with bidirectional native communication.</li>
     <li>Integrated a live-streaming SDK written in Flutter, resolving Flutter module embedding issues and debugging across framework boundaries.</li>
     <li>Coordinated with a third-party signing vendor for enterprise distribution outside the App Store.</li>
@@ -358,6 +368,25 @@
     <tr><td>Viamedia Mobile Corporation</td><td>Sep 2010 – Feb 2012</td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player interactive app</a>, <a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">mini-games</a>, BLE</td></tr>
     <tr><td>Sunplus Semiconductor</td><td>Mar 2010 – Jul 2010</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFi hardware accessory app</a>, internet radio, local music playback</td></tr>
   </table>
+</div>
+
+<!-- PROJECTS -->
+<h2>Projects</h2>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">MVVMC</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/MVVMC">GitHub</a></span>
+  </div>
+  <p>A four-layer iOS architecture (M / VM / V / C) designed to overcome the limitations of SwiftUI's native navigation. Uses <code>UIHostingController</code> as the navigation unit and centralises all routing through <code>AppRouter.shared</code>, keeping SwiftUI views free of any navigation dependencies. Includes a runnable Demo project and an MCP Server for Claude Code integration.</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">WebParser</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/WebParser">GitHub</a></span>
+  </div>
+  <p>A Swift Package for web parsing built on WKWebView off-screen rendering, designed for dynamic pages that require JavaScript execution (SPAs, dynamic DOM). Exposes a type-safe generic Mapper interface (JSON → <code>Decodable</code>, custom Regex extraction), fully Swift 6 strict concurrency compliant, tested with Swift Testing, distributed via SPM with GitHub Actions CI.</p>
 </div>
 
 <!-- EDUCATION -->
