@@ -185,8 +185,8 @@
 
 <div class="skill-block">
   <div class="skill-label">醫療整合</div>
-  <div class="skill-desc">FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.0 Authorization Code Flow；Apple FHIRModels 解析。（<a href="https://github.com/shinrenpan/FhirDemo">FhirDemo</a>）</div>
-  <div class="tags"><span class="tag">FHIR R4</span><span class="tag">SMART on FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
+  <div class="skill-desc">FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.0 Authorization Code Flow + PKCE；Apple FHIRModels 解析。設計「離線 QR 建檔 × SMART on FHIR 授權 × iPad 掃碼 FHIR 寫入」三軌架構，符合 TW Core IG 規範；熟悉台灣醫療 IT 現況（SMART on FHIR vs 靜態 Token 兩種授權模式的取捨）。（<a href="https://github.com/shinrenpan/FHIRpass">FHIRpass</a> / <a href="https://github.com/shinrenpan/FhirDemo">FhirDemo</a>）</div>
+  <div class="tags"><span class="tag">FHIR R4</span><span class="tag">SMART on FHIR</span><span class="tag">TW Core IG</span><span class="tag">HAPI FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
 </div>
 
 <div class="skill-block">
@@ -372,6 +372,19 @@
 
 <!-- Projects -->
 <h2>Projects</h2>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">FHIRpass</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/FHIRpass">GitHub</a></span>
+  </div>
+  <p>萬用醫療身分 iOS App MVP，以「現場離線建檔 + 遠端線上服務」三軌架構，解決第三方醫療服務導入時的資安防火牆阻力與個資法合規問題。全端獨立開發：iOS（SwiftUI + SwiftData）、Python FastAPI、Docker（HAPI FHIR + SMART Launcher）、Web 掃碼前端。</p>
+  <ul>
+    <li><strong>軌道一（離線 QR）：</strong>緊湊字串（UTF-8 → zlib → Base64），SwiftData 本地加密儲存，中台完全不經手個資</li>
+    <li><strong>軌道二（SMART on FHIR）：</strong><code>ASWebAuthenticationSession</code> + OAuth2 + PKCE，Token 強制鎖入 Keychain（<code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code>）</li>
+    <li><strong>軌道三（iPad Counter）：</strong>FastAPI + <code>html5-qrcode</code>，直接 POST Patient 至 HAPI FHIR，實現真實 TW Core IG 建檔；預約生命週期 proposed → booked 完整閉環</li>
+  </ul>
+</div>
 
 <div class="job">
   <div class="job-header">

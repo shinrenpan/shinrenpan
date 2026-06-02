@@ -54,9 +54,9 @@ UIKit 與 SwiftUI 皆熟練，能獨立刻出複雜自訂介面；兩者混搭�
 `CoreBluetooth` `iBeacon`
 
 ### 醫療整合
-FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.0 Authorization Code Flow；Apple FHIRModels 解析。（[FhirDemo](https://github.com/shinrenpan/FhirDemo)）
+FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.0 Authorization Code Flow + PKCE；Apple FHIRModels 解析。設計「離線 QR 建檔 × SMART on FHIR 授權 × iPad 掃碼 FHIR 寫入」三軌架構，符合 TW Core IG 規範；熟悉台灣醫療 IT 現況（SMART on FHIR vs 靜態 Token 兩種授權模式的取捨）。（[FHIRpass](https://github.com/shinrenpan/FHIRpass) / [FhirDemo](https://github.com/shinrenpan/FhirDemo)）
 
-`FHIR R4` `SMART on FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
+`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
 
 ### 工具鏈
 
@@ -182,6 +182,14 @@ FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.
 ---
 
 ## Projects
+
+### FHIRpass　　[GitHub](https://github.com/shinrenpan/FHIRpass)
+
+萬用醫療身分 iOS App MVP，以「現場離線建檔 + 遠端線上服務」三軌架構，解決第三方醫療服務導入時的資安防火牆阻力與個資法合規問題。全端獨立開發：iOS（SwiftUI + SwiftData）、Python FastAPI、Docker（HAPI FHIR + SMART Launcher）、Web 掃碼前端。
+
+- **軌道一（離線 QR）**：緊湊字串（UTF-8 → zlib → Base64），SwiftData 本地加密儲存，中台完全不經手個資
+- **軌道二（SMART on FHIR）**：`ASWebAuthenticationSession` + OAuth2 + PKCE，Token 強制鎖入 Keychain（`kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`）
+- **軌道三（iPad Counter）**：FastAPI + `html5-qrcode`，直接 POST Patient 至 HAPI FHIR，實現真實 TW Core IG 建檔；預約生命週期 proposed → booked 完整閉環
 
 ### MVVMC　　[GitHub](https://github.com/shinrenpan/MVVMC)
 

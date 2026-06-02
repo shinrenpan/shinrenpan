@@ -54,9 +54,9 @@ Native solutions are preferred; major third-party options have also been used in
 `CoreBluetooth` `iBeacon`
 
 ### Healthcare Integration
-Reading and writing FHIR R4 standard resources; SMART on FHIR OAuth 2.0 Authorization Code Flow; Apple FHIRModels parsing. ([FhirDemo](https://github.com/shinrenpan/FhirDemo))
+Reading and writing FHIR R4 standard resources; SMART on FHIR OAuth 2.0 Authorization Code Flow + PKCE; Apple FHIRModels parsing. Designed a three-track architecture (offline QR registration × SMART on FHIR authorization × iPad scan-to-FHIR) conforming to the TW Core IG profile; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs). ([FHIRpass](https://github.com/shinrenpan/FHIRpass) / [FhirDemo](https://github.com/shinrenpan/FhirDemo))
 
-`FHIR R4` `SMART on FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
+`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
 
 ### Toolchain
 
@@ -182,6 +182,14 @@ Built a shopping app centred on a gamification concept inspired by Tap Titans: u
 ---
 
 ## Projects
+
+### FHIRpass　　[GitHub](https://github.com/shinrenpan/FHIRpass)
+
+A universal medical identity iOS App MVP built on a three-track architecture (offline QR registration, SMART on FHIR authorization, iPad scan-to-FHIR check-in), addressing the two biggest barriers to third-party healthcare integration: hospital firewall resistance and personal data compliance. Full-stack solo development: iOS (SwiftUI + SwiftData), Python FastAPI, Docker (HAPI FHIR + SMART Launcher), and a web-based scanning frontend.
+
+- **Track 1 (Offline QR):** Compact string format (UTF-8 → zlib → Base64); local encrypted storage via SwiftData; middleware has zero contact with personal data
+- **Track 2 (SMART on FHIR):** `ASWebAuthenticationSession` + OAuth2 + PKCE; token locked to Keychain with `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`
+- **Track 3 (iPad Counter):** FastAPI + `html5-qrcode`; direct `POST /Patient` to HAPI FHIR with TW Core IG-compliant resources; full appointment lifecycle proposed → booked
 
 ### MVVMC　　[GitHub](https://github.com/shinrenpan/MVVMC)
 
