@@ -191,8 +191,8 @@
 
 <div class="skill-block">
   <div class="skill-label">Healthcare Integration</div>
-  <div class="skill-desc">Reading and writing FHIR R4 standard resources; SMART on FHIR OAuth 2.0 Authorization Code Flow + PKCE; Apple FHIRModels parsing. Designed a three-track architecture (offline QR registration × SMART on FHIR authorization × iPad scan-to-FHIR) conforming to the TW Core IG profile; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs). (<a href="https://github.com/shinrenpan/FHIRpass">FHIRpass</a> / <a href="https://github.com/shinrenpan/FhirDemo">FhirDemo</a>)</div>
-  <div class="tags"><span class="tag">FHIR R4</span><span class="tag">SMART on FHIR</span><span class="tag">TW Core IG</span><span class="tag">HAPI FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
+  <div class="skill-desc">Proficient in FHIR resource reading and writing, SMART on FHIR (OAuth 2.0 + PKCE), TW Core IG (R4), and Apple FHIRModels; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs).</div>
+  <div class="tags"><span class="tag">FHIR</span><span class="tag">SMART on FHIR</span><span class="tag">TW Core IG</span><span class="tag">HAPI FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">TWCoreFHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
 </div>
 
 <div class="skill-block">
@@ -398,6 +398,19 @@
     <span class="job-period"><a href="https://github.com/shinrenpan/MVVMC">GitHub</a></span>
   </div>
   <p>A four-layer iOS architecture (M / VM / V / C) designed to overcome the limitations of SwiftUI's native navigation. Uses <code>UIHostingController</code> as the navigation unit and centralises all routing through <code>AppRouter.shared</code>, keeping SwiftUI views free of any navigation dependencies. Includes a runnable Demo project and an MCP Server for Claude Code integration.</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">TWCoreFHIRModels</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/TWCoreFHIRModels">GitHub</a></span>
+  </div>
+  <p>A Swift Package providing strongly typed TW Core IG extensions on top of Apple's FHIRModels. Adds a <code>.twCore</code> namespace API so developers can set Taiwan-specific fields directly and call <code>validateTWCore()</code> to verify SHALL-required fields automatically — no hardcoded Profile or CodeSystem URLs needed.</p>
+  <ul>
+    <li>Strongly typed <code>.twCore</code> namespace — assign ID card number, declare Profile, validate SHALL fields without any hardcoded URLs</li>
+    <li>Compliance strategy aligned to FHIR RFC 2119 (SHALL / SHOULD / MAY) with validation granularity matched to spec</li>
+    <li>Swift 6.2 strict concurrency, GitHub Actions CI, distributed via SPM</li>
+  </ul>
 </div>
 
 <div class="job">

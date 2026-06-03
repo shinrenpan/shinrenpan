@@ -54,9 +54,9 @@ Native solutions are preferred; major third-party options have also been used in
 `CoreBluetooth` `iBeacon`
 
 ### Healthcare Integration
-Reading and writing FHIR R4 standard resources; SMART on FHIR OAuth 2.0 Authorization Code Flow + PKCE; Apple FHIRModels parsing. Designed a three-track architecture (offline QR registration × SMART on FHIR authorization × iPad scan-to-FHIR) conforming to the TW Core IG profile; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs). ([FHIRpass](https://github.com/shinrenpan/FHIRpass) / [FhirDemo](https://github.com/shinrenpan/FhirDemo))
+Proficient in FHIR resource reading and writing, SMART on FHIR (OAuth 2.0 + PKCE), TW Core IG (R4), and Apple FHIRModels; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs).
 
-`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
+`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `TWCoreFHIRModels` `ASWebAuthenticationSession`
 
 ### Toolchain
 
@@ -194,6 +194,16 @@ A universal medical identity iOS App MVP built on a three-track architecture (of
 ### MVVMC　　[GitHub](https://github.com/shinrenpan/MVVMC)
 
 A four-layer iOS architecture (M / VM / V / C) designed to overcome the limitations of SwiftUI's native navigation. Uses `UIHostingController` as the navigation unit and centralises all routing through `AppRouter.shared`, keeping SwiftUI views free of any navigation dependencies. Includes a runnable Demo project and an MCP Server for Claude Code integration.
+
+### TWCoreFHIRModels　　[GitHub](https://github.com/shinrenpan/TWCoreFHIRModels)
+
+A Swift Package that provides strongly typed TW Core IG extensions on top of Apple's FHIRModels. Working directly with `ModelsR4` to produce FHIR resources conforming to Taiwan's Ministry of Health and Welfare specifications requires manually looking up Profile and CodeSystem URLs, hardcoding them, and writing your own field-validation logic. This package adds a `.twCore` namespace API so developers can set Taiwan-specific fields directly and call `validateTWCore()` to verify SHALL-required fields automatically.
+
+- Strongly typed `.twCore` namespace — assign ID card number, declare Profile, validate SHALL fields without any hardcoded URLs
+- Compliance strategy aligned to FHIR RFC 2119 (SHALL / SHOULD / MAY) with validation granularity matched to spec
+- Swift 6.2 strict concurrency, GitHub Actions CI, distributed via SPM
+
+---
 
 ### WebParser　　[GitHub](https://github.com/shinrenpan/WebParser)
 

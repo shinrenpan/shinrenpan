@@ -54,9 +54,9 @@ UIKit 與 SwiftUI 皆熟練，能獨立刻出複雜自訂介面；兩者混搭�
 `CoreBluetooth` `iBeacon`
 
 ### 醫療整合
-FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.0 Authorization Code Flow + PKCE；Apple FHIRModels 解析。設計「離線 QR 建檔 × SMART on FHIR 授權 × iPad 掃碼 FHIR 寫入」三軌架構，符合 TW Core IG 規範；熟悉台灣醫療 IT 現況（SMART on FHIR vs 靜態 Token 兩種授權模式的取捨）。（[FHIRpass](https://github.com/shinrenpan/FHIRpass) / [FhirDemo](https://github.com/shinrenpan/FhirDemo)）
+熟悉 FHIR 資源讀寫、SMART on FHIR（OAuth 2.0 + PKCE）、TW Core IG（R4）規範與 Apple FHIRModels；了解台灣醫療 IT 現況（SMART on FHIR vs 靜態 Token 的取捨）。
 
-`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `ASWebAuthenticationSession`
+`FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `TWCoreFHIRModels` `ASWebAuthenticationSession`
 
 ### 工具鏈
 
@@ -194,6 +194,16 @@ FHIR R4 標準資源的讀取與寫入；以 SMART on FHIR 規範完成 OAuth 2.
 ### MVVMC　　[GitHub](https://github.com/shinrenpan/MVVMC)
 
 針對 SwiftUI 原生導航的限制自行設計的四層 iOS 架構（M / VM / V / C），以 `UIHostingController` 為導航單元，`AppRouter.shared` 統一管理所有路由邏輯，SwiftUI View 保持零導航依賴。附帶可執行的 Demo 專案與 MCP Server（供 Claude Code 在任何專案取得架構規範）。
+
+### TWCoreFHIRModels　　[GitHub](https://github.com/shinrenpan/TWCoreFHIRModels)
+
+為台灣 iOS / Swift 開發者設計的 TW Core IG 擴充 Swift Package。直接使用 Apple FHIRModels 產出符合衛福部規範的 FHIR 資料時，需手動查閱規格、hardcode Profile URL 與 CodeSystem URL、自行撰寫必填欄位驗證邏輯。本套件在 `ModelsR4` 之上提供強型別的 `.twCore` namespace API，讓開發者直接操作台灣特定欄位，並透過 `validateTWCore()` 自動驗證 SHALL 必填欄位。
+
+- 強型別 `.twCore` namespace，直接賦值身分證號、Profile 宣告、SHALL 欄位驗證，消除 hardcode URL
+- 遵從 FHIR RFC 2119 分層策略（SHALL / SHOULD / MAY），驗證邏輯對應規範粒度
+- Swift 6.2 strict concurrency、GitHub Actions CI、SPM 發佈
+
+---
 
 ### WebParser　　[GitHub](https://github.com/shinrenpan/WebParser)
 
