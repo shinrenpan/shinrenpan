@@ -60,7 +60,7 @@ Wrote a complete HTTP server in Swift (see Siming under Projects); also practica
 `Swift on Server (Hummingbird 2 / SwiftNIO)` `PostgresNIO` `PostgreSQL` `Python FastAPI` `Docker`
 
 ### Healthcare Integration
-Built the FHIR stack end to end in self-directed projects: the server (Siming), a SMART on FHIR client (Tideng), a TW Core IG model package (TWCoreFHIRModels) and an appointment app (FHIRpass). Also a working picture of Taiwan's healthcare IT reality, including the trade-off between SMART on FHIR and static Bearer Tokens.
+Built the FHIR stack end to end in self-directed projects: the server (Siming), a SMART on FHIR client (Tideng), a TW Core IG model package (TWCoreFHIRModels) and an appointment app (FHIRpass). Also a working picture of Taiwan's healthcare IT reality: the mainstream HIS vendors ship no native FHIR export, and the trade-off between SMART on FHIR and static Bearer Tokens.
 
 `FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `TWCoreFHIRModels` `ASWebAuthenticationSession`
 

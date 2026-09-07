@@ -60,7 +60,7 @@ UIKit 與 SwiftUI 都能獨立刻出複雜的自訂介面；兩者混搭是 MVVM
 `Swift on Server (Hummingbird 2 / SwiftNIO)` `PostgresNIO` `PostgreSQL` `Python FastAPI` `Docker`
 
 ### 醫療整合
-以自主專案做過端到端的 FHIR 實作：Server 端（Siming）、SMART on FHIR client（Tideng）、TW Core IG 資料模型套件（TWCoreFHIRModels）與掛號 App（FHIRpass）。也了解台灣醫療 IT 的實際狀況，包括 SMART on FHIR 與靜態 Token 之間的取捨。
+以自主專案做過端到端的 FHIR 實作：Server 端（Siming）、SMART on FHIR client（Tideng）、TW Core IG 資料模型套件（TWCoreFHIRModels）與掛號 App（FHIRpass）。也了解台灣醫療 IT 的實際狀況：主流 HIS 缺乏原生 FHIR 匯出，以及 SMART on FHIR 與靜態 Token 之間的取捨。
 
 `FHIR R4` `SMART on FHIR` `TW Core IG` `HAPI FHIR` `Apple FHIRModels` `TWCoreFHIRModels` `ASWebAuthenticationSession`
 
