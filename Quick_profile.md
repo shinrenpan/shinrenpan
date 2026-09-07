@@ -20,7 +20,7 @@
 
 另外，近期比較多時間放在 HL7 FHIR 這塊，而且是從頭做到尾：Siming 是用 Swift（Hummingbird 2 / SwiftNIO）寫的 FHIR R4 Server，Tideng 是 iPad 上的 SMART on FHIR client，TWCoreFHIRModels 是衛福部 TW Core IG 的 Swift Package，FHIRpass 則是掛號 App 的 MVP。對台灣醫療 IT 的實際狀況也有一定了解。這部分目前是自主研究累積的，還沒有對應的工作經歷。
 
-工作之外我也獨立開發並上架了三款 App：「哈波蜜」（台灣蔬食餐廳地圖，資料由社群投票維護，後端用 Supabase）、「食熵」（食材效期管理）和「隨身鈴」（不需網路的藍牙無障礙呼叫鈴）。後兩者用的就是我自己設計的 MVVMC 架構，算是把架構真的放到產品上跑過一輪。
+工作之外我也獨立開發並上架了三款 App：「哈波蜜」（台灣蔬食餐廳地圖，資料由社群投票維護，Swift 6 + SwiftUI + MapKit，後端用 Supabase）、「食熵」（食材效期管理）和「隨身鈴」（不需網路的藍牙無障礙呼叫鈴）。後兩者用的就是我自己設計的 MVVMC 架構，算是把架構真的放到產品上跑過一輪。
 
 ---
 
@@ -34,4 +34,4 @@ Same rule for dependencies: Apple APIs first, third-party only when there's no r
 
 Lately most of my own time has gone into HL7 FHIR, end to end: Siming, a FHIR R4 server written in Swift (Hummingbird 2 / SwiftNIO); Tideng, an iPad SMART on FHIR client; TWCoreFHIRModels, a Swift Package for Taiwan's TW Core IG; and FHIRpass, an appointment app MVP. All personal projects.
 
-I've also shipped three apps to the App Store on my own: HerbMeet (a vegetarian restaurant map for Taiwan, maintained by community voting on a Supabase backend), FoodEntropy (food-expiry tracking) and SideBell (an offline Bluetooth call bell for accessibility). The last two run on my own MVVMC architecture — the architecture in a real product rather than a demo.
+I've also shipped three apps to the App Store on my own: HerbMeet (a crowdsourced vegetarian restaurant map for Taiwan, Swift 6 / SwiftUI / MapKit on a Supabase backend), FoodEntropy (food-expiry tracking) and SideBell (an offline Bluetooth call bell for accessibility). The last two run on my own MVVMC architecture — the architecture in a real product rather than a demo.

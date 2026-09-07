@@ -27,7 +27,7 @@ Outside of work I've built and shipped three apps to the App Store on my own, ha
 ### UI
 Both UIKit and SwiftUI, including complex custom interfaces built from scratch. The two are combined as the basis of MVVMC, with `UIHostingController` as the navigation unit and SwiftUI handling rendering. Early work with cocos2d for iPhone led on to SpriteKit, which is where animations that UIKit and SwiftUI can't do natively end up.
 
-`UIKit` `SwiftUI` `UIHostingController hybrid` `AutoLayout` `Core Animation` `SpriteKit`
+`UIKit` `SwiftUI` `UIHostingController hybrid` `AutoLayout` `Core Animation` `MapKit` `SpriteKit`
 
 ### Architecture
 Led or contributed to architecture adoption and refactors on several teams; designed a custom one (MVVMC) when the standard options weren't enough.
@@ -199,7 +199,7 @@ Built a shopping app centred on a gamification concept inspired by Tap Titans: u
 
 **HerbMeet**　　[App Store](https://apps.apple.com/tw/app/herbmeet-vegan-restaurant-map/id6787411907)
 
-A vegetarian and vegan restaurant map for Taiwan. A restaurant can carry several tags at once (vegan, lacto, ovo, five pungent ingredients), and closed venues turn grey instead of disappearing. Corrections only take effect once several users have voted them through, so no single account can rewrite an entry. Supabase backs the data and the voting logic. Localised in Traditional Chinese and English, free to use, with a one-time IAP for extra voting weight.
+A crowdsourced vegetarian and vegan restaurant map for Taiwan. A restaurant can carry several tags at once (vegan, lacto, ovo, five pungent ingredients), and closed venues turn grey instead of disappearing. Corrections only take effect once **distinct accounts** have voted them through, so no single account can rewrite an entry. Swift 6 with SwiftUI and MapKit, backed by Supabase for data and voting logic. Localised in Traditional Chinese and English, free to use, with a one-time IAP for extra voting weight.
 
 **FoodEntropy**　　[App Store](https://apps.apple.com/app/id6793926521) · [GitHub](https://github.com/shinrenpan/FoodEntropy)
 

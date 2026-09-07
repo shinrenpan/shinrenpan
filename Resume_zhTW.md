@@ -27,7 +27,7 @@
 ### UI
 UIKit 與 SwiftUI 都能獨立刻出複雜的自訂介面；兩者混搭是 MVVMC 的基礎，`UIHostingController` 當導航單元、SwiftUI 負責畫面渲染。早期寫過 cocos2d for iPhone，後來延伸到 SpriteKit，UIKit / SwiftUI 做不出來的動畫會改用 SpriteKit。
 
-`UIKit` `SwiftUI` `UIHostingController 混搭` `AutoLayout` `Core Animation` `SpriteKit`
+`UIKit` `SwiftUI` `UIHostingController 混搭` `AutoLayout` `Core Animation` `MapKit` `SpriteKit`
 
 ### 架構
 主導或參與過多種架構的導入與重構，現有方案不夠用時會自己設計。
@@ -199,7 +199,7 @@ UIKit 與 SwiftUI 都能獨立刻出複雜的自訂介面；兩者混搭是 MVVM
 
 **HerbMeet（哈波蜜）**　　[App Store](https://apps.apple.com/tw/app/herbmeet-vegan-restaurant-map/id6787411907)
 
-台灣蔬食餐廳地圖。一間店可以同時掛全素 / 奶素 / 蛋素 / 五辛等多重標記，歇業的店轉灰保留而不刪除。資料的修正要經過多人投票才生效，避免單一帳號改寫店家資訊。後端以 Supabase 承載資料與投票邏輯，繁中英文雙語系，免費使用，僅有「投票權重 +1」的一次性 IAP。
+群眾協作的台灣蔬食餐廳地圖。一間店可以同時掛全素 / 奶素 / 蛋素 / 五辛等多重標記，歇業的店轉灰保留而不刪除。資料修正必須由**不同帳號**投票通過才生效，避免單一帳號改寫店家資訊。Swift 6 + SwiftUI + MapKit，後端以 Supabase 承載資料與投票邏輯；繁中英文雙語系，免費使用，僅有「投票權重 +1」的一次性 IAP。
 
 **FoodEntropy（食熵）**　　[App Store](https://apps.apple.com/app/id6793926521) · [GitHub](https://github.com/shinrenpan/FoodEntropy)
 

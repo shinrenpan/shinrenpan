@@ -16,7 +16,7 @@ iOS developer. Most of my work is **architecture**, built on Apple's own framewo
 
 ### On the App Store
 
-**[HerbMeet](https://apps.apple.com/tw/app/herbmeet-vegan-restaurant-map/id6787411907)** — A vegetarian restaurant map for Taiwan. Multi-tag classification, community voting on corrections, closed venues kept rather than deleted. SwiftUI on a Supabase backend.
+**[HerbMeet](https://apps.apple.com/tw/app/herbmeet-vegan-restaurant-map/id6787411907)** — A crowdsourced vegetarian restaurant map for Taiwan. Multi-tag classification, corrections that take effect only once distinct accounts vote them through, closed venues kept rather than deleted. Swift 6 · SwiftUI · MapKit · Supabase.
 
 **[FoodEntropy](https://apps.apple.com/app/id6793926521)** · [GitHub](https://github.com/shinrenpan/FoodEntropy) — A food-expiry tracking app. SwiftUI over a UIKit Router via HostControllers, SwiftData with opt-in CloudKit sync, a WidgetKit widget sharing the app's own presentation code. MVVMC running in a shipped product.
 
