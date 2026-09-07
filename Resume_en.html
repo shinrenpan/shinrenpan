@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <style>
+  @page { size: A4; margin: 0; }
+  table td:first-child { white-space: nowrap; }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -52,6 +55,7 @@
   .job-sub { font-size: 8.5pt; color: #666; margin-bottom: 4px; }
 
   .sub-block { margin-top: 5px; margin-bottom: 2px; }
+  .proj-group { font-size: 9pt; font-weight: 700; color: #666; margin: 9px 0 5px; letter-spacing: 1.2px; border-bottom: 1px solid #ddd; padding-bottom: 2px; }
   .sub-block-title { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 2px; font-family: Arial, sans-serif; }
 
   p { margin-bottom: 3px; }
@@ -104,141 +108,132 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
   <h1>Joe Pan — Senior iOS Engineer</h1>
   <div class="contact">
-    shinren.pan@gmail.com
-    <a href="https://github.com/shinrenpan">github.com/shinrenpan</a>
-    <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>
+    shinren.pan@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/shinrenpan">github.com/shinrenpan</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://apps.apple.com/developer/pan-shinren/id1467353807">App Store</a><br>
+    <a href="https://shinrenpan.github.io">shinrenpan.github.io</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://www.youtube.com/@shinrenpan">YouTube</a><br>
   </div>
 </div>
 
-<!-- SUMMARY -->
 <h2>Summary</h2>
-<p>Over <strong>15 years</strong> of hands-on iOS development experience across a wide range of app types — MFi hardware accessories, instant messaging, video streaming, and fintech — participating in every stage of the platform's evolution from pure Objective-C to modern Swift and SwiftUI.</p>
-<p style="margin-top:4px">Focused on <strong>architecture design</strong>, with a core conviction that architecture should be grounded in Apple's own frameworks — studying the design intent behind UIKit, SwiftUI, and Swift Concurrency, then building loosely coupled, maintainable solutions from that foundation rather than adopting third-party frameworks that diverge from the platform's native model. This <strong>native-first</strong> philosophy extends to dependency management: Apple's native APIs are always the first choice, keeping maintenance overhead and binary size in check. Adapts quickly to existing team conventions and designs custom solutions when established patterns fall short; MVVMC is a direct expression of this conviction.</p>
-<p style="margin-top:4px">Years of hands-on experience across nearly every common app feature type means problems are diagnosed fast — most scenarios have been encountered before, making it possible to zero in on the key information and reach a viable solution quickly.</p>
 
-<!-- SKILLS -->
+  <p>Over <strong>15 years</strong> of iOS development, covering MFi hardware accessories, instant messaging, video streaming and fintech apps, from pure Objective-C through to Swift and SwiftUI.</p>
+  <p>I spend most of my time on <strong>architecture</strong>, and I start from what UIKit, SwiftUI and Swift Concurrency were actually designed to do rather than from a third-party framework that works against them. Dependencies follow the same rule: if an Apple API can do the job, it gets used, which keeps maintenance risk and binary size down. I'm not attached to any one architecture and can work inside a team's existing conventions.</p>
+  <p>Most common app feature types have come up at some point over the years, so I can usually work out where a problem is coming from fairly quickly.</p>
+  <p>Outside of work I've built and shipped three apps to the App Store on my own, handling design, development, backend integration and release. Recent side work has gone into HL7 FHIR, including a FHIR R4 server written in Swift.</p>
 <h2>Skills</h2>
 
 <div class="skill-block">
   <div class="skill-label">Languages</div>
-  <div class="tags">
-    <span class="tag">Swift 3.0 – present</span>
-    <span class="tag">Objective-C 2009 – present</span>
-  </div>
+  <div class="tags"><span class="tag">Swift 3.0 – present</span><span class="tag">Objective-C 2009 – present</span></div>
 </div>
 
 <div class="skill-block">
   <div class="skill-label">UI</div>
-  <div class="skill-desc">Proficient in both UIKit and SwiftUI, capable of building complex custom interfaces from scratch. The two are combined as the core foundation of the MVVMC architecture, with <code>UIHostingController</code> as the navigation unit and SwiftUI handling rendering. Early study of cocos2d for iPhone established a solid 2D graphics foundation, which carried over into deep familiarity with SpriteKit — used as a fallback for animations and interactions that UIKit and SwiftUI cannot achieve natively.</div>
-  <div class="tags">
-    <span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController hybrid</span>
-    <span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span>
-  </div>
+  <div class="skill-desc">Both UIKit and SwiftUI, including complex custom interfaces built from scratch. The two are combined as the basis of MVVMC, with <code>UIHostingController</code> as the navigation unit and SwiftUI handling rendering. Early work with cocos2d for iPhone led on to SpriteKit, which is where animations that UIKit and SwiftUI can't do natively end up.</div>
+  <div class="tags"><span class="tag">UIKit</span><span class="tag">SwiftUI</span><span class="tag">UIHostingController hybrid</span><span class="tag">AutoLayout</span><span class="tag">Core Animation</span><span class="tag">SpriteKit</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Architecture</div>
-  <div class="skill-desc">Not tied to a single pattern — prioritises maintainability and team adaptability. Has led or contributed to the adoption and refactoring of multiple architectures; designs custom solutions when standard ones prove inadequate.</div>
-  <div class="tags">
-    <span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span>
-    <span class="tag">MVVMC (custom)</span><span class="tag">@Observable / @MainActor</span>
-  </div>
+  <div class="skill-desc">Led or contributed to architecture adoption and refactors on several teams; designed a custom one (MVVMC) when the standard options weren't enough.</div>
+  <div class="tags"><span class="tag">MVC</span><span class="tag">MVVM</span><span class="tag">Clean Swift</span><span class="tag">TCA</span><span class="tag">MVVMC (custom)</span><span class="tag">@Observable / @MainActor</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Swift Concurrency</div>
-  <div class="skill-desc">Migrated an existing Swift 5+ codebase to full Swift 6 readiness through systematic adoption of Swift Concurrency.</div>
-  <div class="tags">
-    <span class="tag">async/await</span><span class="tag">@MainActor</span><span class="tag">actor</span>
-    <span class="tag">Sendable</span><span class="tag">Task / TaskGroup</span>
-  </div>
+  <div class="skill-desc">Took over an existing Swift 5+ codebase, introduced Swift Concurrency and refactored it to Swift 6 readiness.</div>
+  <div class="tags"><span class="tag">async/await</span><span class="tag">@MainActor</span><span class="tag">actor</span><span class="tag">Sendable</span><span class="tag">Task / TaskGroup</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Networking</div>
-  <div class="skill-desc">URLSession is the default (native-first); gRPC is used where the project requires it. Practical experience with Alamofire and other third-party networking libraries.</div>
-  <div class="tags">
-    <span class="tag">URLSession</span><span class="tag">gRPC (grpc-swift / connect-swift)</span><span class="tag">Alamofire</span>
-  </div>
+  <div class="skill-desc">URLSession by default, gRPC where the project needs it. Also practical experience with Alamofire and other third-party networking libraries.</div>
+  <div class="tags"><span class="tag">URLSession</span><span class="tag">gRPC (grpc-swift / connect-swift)</span><span class="tag">Alamofire</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Real-Time Communication</div>
-  <div class="skill-desc">Hands-on production experience with all major messaging protocols, covering both text-based communication and live video streaming.</div>
-  <div class="tags">
-    <span class="tag">WebSocket</span><span class="tag">XMPP</span><span class="tag">MQTT</span><span class="tag">SignalR</span>
-    <span class="tag">VoIP</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span>
-  </div>
+  <div class="skill-desc">Shipped projects using WebSocket, XMPP, MQTT and SignalR, plus live video streaming.</div>
+  <div class="tags"><span class="tag">WebSocket</span><span class="tag">XMPP</span><span class="tag">MQTT</span><span class="tag">SignalR</span><span class="tag">Live Streaming (HaishinKit / ijkplayer / ReplayKit)</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Persistence</div>
-  <div class="skill-desc">Native solutions are preferred; major third-party options have also been used in production.</div>
-  <div class="tags">
-    <span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">Keychain</span>
-    <span class="tag">NSKeyedArchiver</span><span class="tag">Realm</span><span class="tag">fmdb</span>
-  </div>
+  <div class="skill-desc">Native options first, third-party where the project already called for it.</div>
+  <div class="tags"><span class="tag">CoreData</span><span class="tag">SwiftData</span><span class="tag">Keychain</span><span class="tag">NSKeyedArchiver</span><span class="tag">Realm</span><span class="tag">fmdb</span></div>
+
 </div>
 
 <div class="skill-block">
-  <div class="skill-label">Bluetooth</div>
-  <div class="tags"><span class="tag">CoreBluetooth</span><span class="tag">iBeacon</span></div>
+  <div class="skill-label">Backend</div>
+  <div class="skill-desc">Wrote a complete HTTP server in Swift (see Siming under Projects); also practical experience with Python FastAPI and Docker deployment.</div>
+  <div class="tags"><span class="tag">Swift on Server (Hummingbird 2 / SwiftNIO)</span><span class="tag">PostgresNIO</span><span class="tag">PostgreSQL</span><span class="tag">Python FastAPI</span><span class="tag">Docker</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Healthcare Integration</div>
-  <div class="skill-desc">Proficient in FHIR resource reading and writing, SMART on FHIR (OAuth 2.0 + PKCE), TW Core IG (R4), and Apple FHIRModels; familiar with the real-world Taiwan healthcare IT landscape (SMART on FHIR vs. static Bearer Token trade-offs).</div>
-  <div class="tags"><span class="tag">FHIR</span><span class="tag">SMART on FHIR</span><span class="tag">TW Core IG</span><span class="tag">HAPI FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">TWCoreFHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
+  <div class="skill-desc">Built the FHIR stack end to end in self-directed projects: the server (Siming), a SMART on FHIR client (Tideng), a TW Core IG model package (TWCoreFHIRModels) and an appointment app (FHIRpass). Also a working picture of Taiwan's healthcare IT reality, including the trade-off between SMART on FHIR and static Bearer Tokens.</div>
+  <div class="tags"><span class="tag">FHIR R4</span><span class="tag">SMART on FHIR</span><span class="tag">TW Core IG</span><span class="tag">HAPI FHIR</span><span class="tag">Apple FHIRModels</span><span class="tag">TWCoreFHIRModels</span><span class="tag">ASWebAuthenticationSession</span></div>
+
+</div>
+
+<div class="skill-block">
+  <div class="skill-label">Bluetooth</div>
+  <div class="skill-desc">Built serverless device-to-device links with CoreBluetooth (the SideBell call bell); earlier work covered MFi hardware accessories and BLE integration.</div>
+  <div class="tags"><span class="tag">CoreBluetooth</span><span class="tag">iBeacon</span></div>
+
 </div>
 
 <div class="skill-block">
   <div class="skill-label">Toolchain</div>
-  <table>
-    <tr><th style="width:22%">Category</th><th>Tools</th></tr>
-    <tr><td>Version Control</td><td>Git</td></tr>
-    <tr><td>Package Management</td><td>Swift Package Manager, CocoaPods, Carthage</td></tr>
-    <tr><td>Project Management</td><td>XcodeGen, Tuist</td></tr>
-    <tr><td>CI / CD</td><td>Xcode Cloud, Jenkins, Fastlane, Firebase App Distribution</td></tr>
-    <tr><td>AI Development</td><td>Claude (CLAUDE.md + Skill specs for systematic code generation)</td></tr>
-  </table>
+<table>
+  <tr><th>Category</th><th>Tools</th></tr>
+  <tr><td>Version Control</td><td>Git</td></tr>
+  <tr><td>Package Management</td><td>Swift Package Manager, CocoaPods, Carthage</td></tr>
+  <tr><td>Project Management</td><td>XcodeGen, Tuist</td></tr>
+  <tr><td>CI / CD</td><td>Xcode Cloud, Jenkins, Fastlane, Firebase App Distribution</td></tr>
+  <tr><td>Spec-Driven Development</td><td><a href="https://github.com/kaochenlong/spectra-app">Spectra</a> (SDD): capability specs and change proposals kept under version control, written before the code</td></tr>
+  <tr><td>AI Collaboration</td><td>Claude Code (constrained by CLAUDE.md + Skill documents so output matches the project's existing architecture)</td></tr>
+</table>
+
 </div>
 
-<!-- EXPERIENCE -->
 <h2>Experience</h2>
 
-<!-- DRACO -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">DRACO EVOLUTION</span>
     <span class="job-period">Apr 2025 – Jun 2026</span>
   </div>
-  <div class="job-sub">Senior iOS Engineer　·　Took over from an outsourced team; sole iOS engineer at the company</div>
-  <p>Independently assessed code quality, paid down technical debt, and led the technical architecture evolution.</p>
+  <div class="job-sub">Senior iOS Engineer　Took over from an outsourced team; sole iOS engineer at the company</div>
+  <p>Assessed code quality, paid down technical debt and led the architectural changes.</p>
   <ul>
-    <li><strong>TCA upgrade and removal:</strong> Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2 (1.18.0 → 1.19.1 → 1.20.2 → 1.21.1 → 1.22.1 → 1.22.2). During routine maintenance and feature development, identified that TCA's built-in Navigation Stack could not accommodate the app's non-standard routing requirements, prompting a gradual architectural rewrite that went live on 18 Sep 2025.</li>
-    <li><strong>Custom MVVMC architecture (<a href="https://github.com/shinrenpan/MVVMC">GitHub</a>):</strong> After removing TCA, found that SwiftUI's native NavigationStack still couldn't handle complex non-standard routing (e.g. simultaneously dismissing a checkout flow, switching tabs, and clearing a navigation stack). Combined with a deliberate decision not to base the entire codebase on a third-party architecture framework, drew on concepts from TCA and MVI to design MVVMC from scratch in native Swift — extending MVVM with a HostController layer (C): M handles State / Domain Models / DTOs; VM uses <code>@Observable @MainActor</code> with a single entry point (<code>doAction</code>) for business logic; V is pure SwiftUI with zero navigation or business logic; C (<code>UIHostingController</code>) is the sole Router with all navigation centralised through <code>AppRouter.shared</code>. Open-sourced with an MCP Server so Claude Code can access the architecture spec from any project.</li>
-    <li><strong>Swift 5 → Ready for Swift 6 migration:</strong> Inherited a Swift 5+ codebase and systematically introduced <code>async/await</code>, <code>@MainActor</code>, <code>actor</code>, and <code>Sendable</code>, completing the Swift 6 compatibility migration in parallel with the TCA removal and MVVMC refactor.</li>
-    <li><strong>Xcode Cloud CI/CD pipeline:</strong> Dev builds distribute automatically to TestFlight internal testers; production builds distribute to TestFlight external testers — fully automated, no manual steps required.</li>
-    <li><strong>US App Store release:</strong> Published exclusively on the US App Store to comply with SEC regulations; subsequently taken down following an API shutdown.</li>
-    <li><strong>AI-assisted development workflow (Claude + Skill):</strong> Authored <code>CLAUDE.md</code> and a suite of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency, etc.) so that Claude generates feature code that conforms to the project's existing architecture, significantly reducing time-to-feature.</li>
+    <li><strong>TCA upgrade and removal:</strong>Inherited the project at TCA 1.15.2 and upgraded incrementally to 1.22.2. While maintaining the app and adding features, found that TCA's built-in Navigation Stack couldn't handle the app's non-standard routing rules, started a gradual rewrite, and removed TCA on 18 Sep 2025 once it was stable.</li>
+    <li><strong>Custom MVVMC architecture (<a href="https://github.com/shinrenpan/MVVMC">GitHub</a>):</strong>After removing TCA, SwiftUI's native NavigationStack turned out to have the same problem with complex non-standard routing (dismissing a checkout flow, switching tabs and clearing a navigation stack at the same time). That, plus not wanting the whole codebase's architecture tied to a third-party package, led to designing MVVMC in native Swift, borrowing ideas from TCA and MVI: MVVM with a HostController layer (C) added on top. M handles State / Domain Models / DTOs, VM uses <code>@Observable @MainActor</code> with a single entry point (<code>doAction</code>) for business logic, V is pure SwiftUI with no navigation logic, and C (<code>UIHostingController</code>) is the sole Router, with all navigation going through <code>AppRouter.shared</code>. Later open-sourced with an MCP Server so Claude Code can pick up the spec in any project.</li>
+    <li><strong>Swift 5 → Ready for Swift 6 migration:</strong>The inherited codebase was Swift 5+; introduced <code>async/await</code>, <code>@MainActor</code>, <code>actor</code> and <code>Sendable</code> over time, finishing the Swift 6 compatibility work alongside the TCA removal and MVVMC refactor.</li>
+    <li><strong>Xcode Cloud CI/CD pipeline:</strong>Dev builds go to TestFlight internal testers and production builds to TestFlight external testers, with no manual steps.</li>
+    <li><strong>US App Store release:</strong>Published exclusively on the US App Store to comply with SEC regulations; subsequently taken down following an API shutdown.</li>
+    <li><strong>AI-assisted development workflow (Claude + Skill):</strong>Wrote <code>CLAUDE.md</code> and a set of Skill documents (SwiftUI, ViewModel, HostController, Model, Swift Concurrency and so on) so Claude produces feature code that follows the project's architecture.</li>
   </ul>
 </div>
 
 <hr>
 
-<!-- 皆凱 -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Evervictory Technology</span>
     <span class="job-period">Sep 2023 – Sep 2024</span>
   </div>
-  <div class="job-sub">iOS Engineer　·　Lead developer in a 3-person iOS team; the other two focused on an in-house K-Line library and a separate VPN app</div>
-  <p>Primary maintainer of a fintech trading platform and <a href="https://apps.apple.com/tw/app/id6467499244">JinTian GT</a> (a precious-metals trading app), plus contributions to an in-house IM client built on Tinode.</p>
-
+  <div class="job-sub">iOS Engineer　The main developer on a 3-person iOS team; the other two focused on an in-house K-Line library and a separate VPN app</div>
+  <p>Primary maintainer of a fintech trading platform and JinTian GT (a precious-metals trading app), plus contributions to an in-house IM client built on Tinode.</p>
   <div class="sub-block">
     <div class="sub-block-title">Fintech Trading App (<a href="https://www.youtube.com/watch?v=4xdZ6mtfEa0">demo</a>)</div>
     <ul>
@@ -248,9 +243,8 @@
       <li>Wrote shell scripts to switch between dev / QAT / production environments; implemented in-app live language switching.</li>
     </ul>
   </div>
-
   <div class="sub-block">
-    <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/id6467499244">JinTian GT</a> App (<a href="https://youtu.be/Rh_pZrOLsh0">demo</a>)</div>
+    <div class="sub-block-title">JinTian GT App (<a href="https://youtu.be/Rh_pZrOLsh0">demo</a>)</div>
     <ul>
       <li>Swift / Objective-C mixed-language development; integrated gRPC for data transport.</li>
       <li>Applied the <a href="http://www.enharmonichq.com/rate-limiting-uitableview-and-uicollectionview-reloads/">Rate Limiting UITableView/UICollectionView Reloads</a> technique to throttle excessive reloads triggered by high-frequency gRPC updates.</li>
@@ -259,31 +253,29 @@
       <li>Adopted Xcode 15 asset symbol generation; built a JavaScript bridge for bidirectional HTML5 ↔ native communication.</li>
     </ul>
   </div>
-
   <div class="sub-block">
     <div class="sub-block-title">IM Client (Tinode-based)</div>
     <ul>
-      <li>Removed Storyboard in favour of fully programmatic UI to enable deep customisation of Tinode's default interface.</li>
-      <li>With no Golang engineer on the team, self-taught Go and read through the Tinode server codebase to understand server behaviour and accurately define the boundaries of IM feature development.</li>
+      <li>Dropped Storyboard for fully programmatic UI, since Tinode's default interface needed heavy customisation.</li>
+      <li>With no Golang engineer on the team, learned Go and read through the Tinode server codebase to understand how the server behaved and how far the IM features could go.</li>
     </ul>
   </div>
 </div>
 
 <hr>
 
-<!-- 恒遠 -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Heng Yuan Technology Co., Ltd.</span>
     <span class="job-period">Apr 2022 – Jul 2023</span>
   </div>
-  <div class="job-sub">iOS Engineer　·　Sole iOS engineer on the project (<a href="https://youtu.be/vgyh0lbtPYY">demo</a>)</div>
-  <p>Took over an Objective-C codebase and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming, and chat.</p>
+  <div class="job-sub">iOS Engineer　Sole iOS engineer on the project (<a href="https://youtu.be/vgyh0lbtPYY">demo</a>)</div>
+  <p>Took over an Objective-C codebase and led the technical modernisation of an app covering short video, long video, comics, novels, games, live streaming and chat.</p>
   <ul>
-    <li><strong>Led ObjC → Swift migration:</strong> Defined a gradual strategy — all new features written in Swift, legacy modules refactored incrementally.</li>
+    <li><strong>Led ObjC → Swift migration:</strong>Took a gradual approach: all new features in Swift, legacy modules refactored bit by bit.</li>
     <li>Introduced XcodeGen to eliminate Git project-file conflicts; researched Tuist and evaluated both tools.</li>
-    <li><strong>Refactored local HLS playback architecture:</strong> The original approach downloaded m3u8 files locally and served them through GCDWebServer — high maintenance cost. Replaced with a custom <code>AVAssetResourceLoaderDelegate</code>: substitutes <code>file://</code> with a custom <code>local://</code> scheme so AVPlayer delegates the request to the loader, which swaps back to <code>file://</code> and reads the local data. Removed the GCDWebServer dependency and reduced binary size (<a href="https://shinrenpan.github.io/2022-07-13/">reference article</a>).</li>
-    <li>Built comic reader, novel reader, and embedded game pages — all using WebView with bidirectional native communication.</li>
+    <li><strong>Refactored local HLS playback architecture:</strong>The original approach downloaded m3u8 files locally and served them through GCDWebServer, which was expensive to maintain. Replaced it with a custom <code>AVAssetResourceLoaderDelegate</code>: <code>file://</code> is swapped for a custom <code>local://</code> scheme so AVPlayer hands the request to the loader, which swaps back to <code>file://</code> and reads the local data. This removed the GCDWebServer dependency and brought binary size down (<a href="https://shinrenpan.github.io/2022-07-13/">reference article</a>).</li>
+    <li>Built the comic reader, novel reader and embedded game pages, all using WebView with bidirectional native communication.</li>
     <li>Integrated a live-streaming SDK written in Flutter, resolving Flutter module embedding issues and debugging across framework boundaries.</li>
     <li>Coordinated with a third-party signing vendor for enterprise distribution outside the App Store.</li>
   </ul>
@@ -291,7 +283,6 @@
 
 <hr>
 
-<!-- 遊戲橘子 BeanFun -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Gamania Group</span>
@@ -302,115 +293,118 @@
     <div class="sub-block-title"><a href="https://apps.apple.com/tw/app/beanfun/id1108282446">BeanFun</a> App</div>
     <ul>
       <li>Collaborated with the team to introduce Clean Swift architecture, progressively migrating Objective-C modules to Swift.</li>
-      <li>BeanFun loads the majority of its features in WebViews and requires hot-reload support; implemented deep WebView ↔ native bidirectional communication covering JavaScript bridge design, event propagation, and page state synchronisation.</li>
+      <li>BeanFun loads most of its features in WebViews and needs hot-reload support; built the WebView ↔ native bidirectional communication, including JavaScript bridge design, event propagation and page state synchronisation.</li>
     </ul>
   </div>
 </div>
 
 <hr>
 
-<!-- 遊戲橘子 teamup -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Gamania Group</span>
     <span class="job-period">Sep 2018 – Mar 2019</span>
   </div>
-  <div class="job-sub">iOS Contract Engineer　·　Lead iOS developer</div>
+  <div class="job-sub">iOS Contract Engineer　Primary iOS developer</div>
   <div class="sub-block">
     <div class="sub-block-title">In-House Enterprise App "teamup!"</div>
-    <p>Internal project management and approval platform supporting instant messaging, digital sign-off, and access control. Used by Gamania's CEO during an Antarctic expedition as a remote management tool (<a href="https://www.bnext.com.tw/article/51537/gamania-teamup">press coverage</a>).</p>
-    <ul>
-      <li>Optimised for low-bandwidth conditions: cached API responses with fmdb for offline use; implemented multi-tier image caching (thumbnail-first display, background download and swap to full resolution) to keep the app functional on slow connections.</li>
-    </ul>
   </div>
+  <p>Internal project management and approval platform supporting instant messaging, digital sign-off, and access control. Used by Gamania's CEO during an Antarctic expedition as a remote management tool (<a href="https://www.bnext.com.tw/article/51537/gamania-teamup">press coverage</a>).</p>
+  <ul>
+    <li>Optimised for low-bandwidth conditions: cached API responses with fmdb for offline use, and built multi-tier image caching (show the thumbnail first, download the full image in the background and swap it in) so the app stayed usable on slow connections.</li>
+  </ul>
 </div>
 
 <hr>
 
-<!-- 緯創 -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Wistron ITS</span>
     <span class="job-period">Aug 2016 – Mar 2018</span>
   </div>
-  <div class="job-sub">iOS Engineer　·　On-site at Cathay Life Insurance</div>
-  <p>Primary maintainer of the <a href="https://itunes.apple.com/tw/app/id432046643">Cathay Life Insurance</a> app. The codebase was Objective-C; following Cathay's internal decision to adopt Swift, took responsibility for implementing new features in Swift and progressively migrating legacy Objective-C modules.</p>
+  <div class="job-sub">iOS Engineer　On-site at Cathay Life Insurance</div>
+  <p>Wistron's only dispatched iOS engineer on site, and the maintainer of the <a href="https://itunes.apple.com/tw/app/id432046643">Cathay Life Insurance</a> app. The codebase was Objective-C; following Cathay's internal decision to adopt Swift, took responsibility for implementing new features in Swift and progressively migrating legacy Objective-C modules.</p>
 </div>
 
 <hr>
 
-<!-- 和特 -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Hoter Information</span>
     <span class="job-period">Mar 2016 – Jun 2016</span>
   </div>
   <div class="job-sub">iOS Engineer</div>
-  <p>Developed an in-house hotel workforce management app for staff scheduling, real-time reporting, and check-in. The backend chose SignalR for the chat feature — an uncommon choice at a time when XMPP and MQTT dominated the space — providing first-hand experience with the SignalR protocol. Also implemented geofenced check-in using Core Location.</p>
+  <p>Developed an in-house hotel workforce management app for staff scheduling, real-time reporting, and check-in. The backend used SignalR for chat, an uncommon choice at a time when XMPP and MQTT dominated, which is where the SignalR experience comes from. Also implemented geofenced check-in using Core Location.</p>
 </div>
 
 <hr>
 
-<!-- 互聯網 -->
 <div class="job">
   <div class="job-header">
     <span class="job-title">Internet Mobile Technology</span>
     <span class="job-period">Apr 2015 – Jan 2016</span>
   </div>
   <div class="job-sub">iOS Engineer</div>
-  <p>Built a shopping app centred on a gamification concept inspired by Tap Titans: users earn virtual currency or discount coupons through in-app gameplay, redeemable in the store. Implemented chat using XMPP and built the game module with SpriteKit — the first experience integrating a game engine into an e-commerce app.</p>
+  <p>Built a shopping app centred on a gamification concept inspired by Tap Titans: users earn virtual currency or discount coupons through in-app gameplay, redeemable in the store. Implemented chat with XMPP and built the game module with SpriteKit, the first time integrating a game engine into an e-commerce app.</p>
 </div>
 
 <hr>
 
-<!-- 早期 -->
 <div class="job">
-  <div class="job-title" style="margin-bottom:5px">Earlier Experience (2010 – 2015)</div>
-  <table>
-    <tr><th style="width:20%">Company</th><th style="width:22%">Period</th><th>Key Work</th></tr>
-    <tr><td>PiPiMy</td><td>Jan 2015 – Mar 2015</td><td>C2C second-hand trading app (Beta)</td></tr>
-    <tr><td>Timeline Technology</td><td>May 2012 – Jun 2014</td><td>Template-based storefront app framework / <a href="https://itunes.apple.com/tw/app/id551945238">coupon app</a></td></tr>
-    <tr><td>JamZoo</td><td>Nov 2012 – Jun 2013</td><td>Migrated "Single Bank" app chat from timer polling to MQTT (following Facebook's adoption of MQTT), resolving lag; built <a href="https://www.youtube.com/watch?v=aail3KJdb4c">offline-capable car rental app</a> and HTML5 e-book WebView</td></tr>
-    <tr><td>Viamedia Mobile Corporation</td><td>Sep 2010 – Feb 2012</td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player interactive app</a>, <a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">mini-games</a>, BLE</td></tr>
-    <tr><td>Sunplus Semiconductor</td><td>Mar 2010 – Jul 2010</td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFi hardware accessory app</a>, internet radio, local music playback</td></tr>
-  </table>
+  <div class="job-header">
+    <span class="job-title">Earlier Experience (2010 – 2015)</span>
+    <span class="job-period"></span>
+  </div>
+<table>
+  <tr><th>Company</th><th>Period</th><th>Key Work</th></tr>
+  <tr><td>PiPiMy</td><td><span style="white-space:nowrap">Jan 2015 – Mar 2015</span></td><td>C2C second-hand trading app (Beta)</td></tr>
+  <tr><td>Timeline Technology</td><td><span style="white-space:nowrap">May 2012 – Jun 2014</span></td><td>Template-based storefront app framework / <a href="https://itunes.apple.com/tw/app/id551945238">coupon app</a></td></tr>
+  <tr><td>JamZoo</td><td><span style="white-space:nowrap">Nov 2012 – Jun 2013</span></td><td>Migrated "Single Bank" app chat from timer polling to MQTT (following Facebook's adoption of MQTT), resolving lag; built <a href="https://www.youtube.com/watch?v=aail3KJdb4c">offline-capable car rental app</a> and HTML5 e-book WebView</td></tr>
+  <tr><td>Viamedia Mobile Corporation</td><td><span style="white-space:nowrap">Sep 2010 – Feb 2012</span></td><td><a href="https://www.youtube.com/watch?v=Unv4XT5EjNI">Media Player interactive app</a>, <a href="https://www.youtube.com/watch?v=fLPyCJoCQWY">mini-games</a>, BLE</td></tr>
+  <tr><td>Sunplus Semiconductor</td><td><span style="white-space:nowrap">Mar 2010 – Jul 2010</span></td><td><a href="https://www.youtube.com/watch?v=ZVgwwkCCrUQ">MFi hardware accessory app</a>, internet radio, local music playback</td></tr>
+</table>
+
 </div>
 
-<!-- PROJECTS -->
+<hr>
+
 <h2>Projects</h2>
 
+<div class="proj-group">Shipped Apps</div>
+
 <div class="job">
   <div class="job-header">
-    <span class="job-title">FHIRpass</span>
-    <span class="job-period"><a href="https://github.com/shinrenpan/FHIRpass">GitHub</a></span>
+    <span class="job-title">HerbMeet</span>
+    <span class="job-period"><a href="https://apps.apple.com/tw/app/herbmeet-vegan-restaurant-map/id6787411907">App Store</a></span>
   </div>
-  <p>A universal medical identity iOS App MVP built on a three-track architecture (offline QR registration, SMART on FHIR authorization, iPad scan-to-FHIR check-in), addressing the two biggest barriers to third-party healthcare integration: hospital firewall resistance and personal data compliance. Full-stack solo development: iOS (SwiftUI + SwiftData), Python FastAPI, Docker (HAPI FHIR + SMART Launcher), and a web-based scanning frontend.</p>
-  <ul>
-    <li><strong>Track 1 (Offline QR):</strong> Compact string format (UTF-8 → zlib → Base64); local encrypted storage via SwiftData; middleware has zero contact with personal data</li>
-    <li><strong>Track 2 (SMART on FHIR):</strong> <code>ASWebAuthenticationSession</code> + OAuth2 + PKCE; token locked to Keychain with <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code></li>
-    <li><strong>Track 3 (iPad Counter):</strong> FastAPI + <code>html5-qrcode</code>; direct <code>POST /Patient</code> to HAPI FHIR with TW Core IG-compliant resources; full appointment lifecycle proposed → booked</li>
-  </ul>
+  <p>A vegetarian and vegan restaurant map for Taiwan. A restaurant can carry several tags at once (vegan, lacto, ovo, five pungent ingredients), and closed venues turn grey instead of disappearing. Corrections only take effect once several users have voted them through, so no single account can rewrite an entry. Supabase backs the data and the voting logic. Localised in Traditional Chinese and English, free to use, with a one-time IAP for extra voting weight.</p>
 </div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">MVVMC</span>
-    <span class="job-period"><a href="https://github.com/shinrenpan/MVVMC">GitHub</a></span>
+    <span class="job-title">FoodEntropy</span>
+    <span class="job-period"><a href="https://apps.apple.com/app/id6793926521">App Store</a> · <a href="https://github.com/shinrenpan/FoodEntropy">GitHub</a></span>
   </div>
-  <p>A four-layer iOS architecture (M / VM / V / C) designed to overcome the limitations of SwiftUI's native navigation. Uses <code>UIHostingController</code> as the navigation unit and centralises all routing through <code>AppRouter.shared</code>, keeping SwiftUI views free of any navigation dependencies. Includes a runnable Demo project and an MCP Server for Claude Code integration.</p>
+  <p>A food-expiry tracking app, actively maintained, and MVVMC running in a real shipped product. The widget reuses the app's own presentation code rather than a second UI layer; persistence is SwiftData with iCloud sync left as a switch the user can flip, so the schema stays within what CloudKit will accept. Built with Spectra's SDD workflow: features start as capability specs under <code>openspec/specs/</code>, changes start as proposals and are archived once implemented, with specs and proposals under version control.</p>
 </div>
 
 <div class="job">
   <div class="job-header">
-    <span class="job-title">TWCoreFHIRModels</span>
-    <span class="job-period"><a href="https://github.com/shinrenpan/TWCoreFHIRModels">GitHub</a></span>
+    <span class="job-title">SideBell</span>
+    <span class="job-period"><a href="https://apps.apple.com/us/app/sidebell/id6799201744">App Store</a> · <a href="https://github.com/shinrenpan/SideBell">GitHub</a></span>
   </div>
-  <p>A Swift Package providing strongly typed TW Core IG extensions on top of Apple's FHIRModels. Adds a <code>.twCore</code> namespace API so developers can set Taiwan-specific fields directly and call <code>validateTWCore()</code> to verify SHALL-required fields automatically — no hardcoded Profile or CodeSystem URLs needed.</p>
-  <ul>
-    <li>Strongly typed <code>.twCore</code> namespace — assign ID card number, declare Profile, validate SHALL fields without any hardcoded URLs</li>
-    <li>Compliance strategy aligned to FHIR RFC 2119 (SHALL / SHOULD / MAY) with validation granularity matched to spec</li>
-    <li>Swift 6.2 strict concurrency, GitHub Actions CI, distributed via SPM</li>
-  </ul>
+  <p>An accessible call bell that works without the internet. The patient taps once on an iPad; the caregiver's iPhone raises an alarm, says out loud what is needed, and keeps repeating until someone responds — all over a direct Bluetooth link, with no server, no account and no subscription. Built for people with ALS, severe motor impairment or anyone recovering in bed. Pure SwiftUI on the MVVMC architecture, 107 tests, with a demo video and a bilingual set-up guide.</p>
+</div>
+
+<div class="proj-group">Architecture and Open Source</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">MVVMC family</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/MVVMC">MVVMC</a> · <a href="https://github.com/shinrenpan/MVVMR">MVVMR</a> · <a href="https://github.com/shinrenpan/MVVMC-Skip">MVVMC-Skip</a></span>
+  </div>
+  <p>The four-layer architecture designed and put into production at DRACO (described above), packaged as an open-source repo with a runnable Demo and an MCP Server.</p>
+  <p>It later went two ways: <strong>MVVMR</strong> reimplements it in pure SwiftUI, with M and VM unchanged and navigation moving to <code>NavigationStack</code> plus an <code>@Environment</code> AppRouter, so routes become values rather than commands. <strong>MVVMC-Skip</strong> carries it to Android through Skip.tools, swapping the C layer behind <code>#if SKIP</code> with zero changes on the iOS side.</p>
 </div>
 
 <div class="job">
@@ -418,21 +412,61 @@
     <span class="job-title">WebParser</span>
     <span class="job-period"><a href="https://github.com/shinrenpan/WebParser">GitHub</a></span>
   </div>
-  <p>A Swift Package for web parsing built on WKWebView off-screen rendering, designed for dynamic pages that require JavaScript execution (SPAs, dynamic DOM). Exposes a type-safe generic Mapper interface (JSON → <code>Decodable</code>, custom Regex extraction), fully Swift 6 strict concurrency compliant, tested with Swift Testing, distributed via SPM with GitHub Actions CI.</p>
+  <p>A Swift Package for web parsing built on WKWebView off-screen rendering, for dynamic pages that need JavaScript to run (SPAs, dynamic DOM). It exposes a type-safe generic Mapper interface (JSON → <code>Decodable</code>, custom Regex extraction) and is Swift 6 strict concurrency compliant. Swift Testing, GitHub Actions CI, distributed via SPM.</p>
 </div>
 
-<!-- EDUCATION -->
+<div class="proj-group">Healthcare / FHIR</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Siming</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/Siming">GitHub</a></span>
+  </div>
+  <p>A FHIR R4 server written in Swift, aimed at clinical data for small clinics and compliant with TW Core IG. Hummingbird 2 (SwiftNIO) + PostgresNIO (no ORM) + Apple FHIRModels, covering 24 FHIR R4 resource types with CRUD, search, history, compartment and transaction bundle, plus a built-in resource browser, one-command Docker deployment and GitHub Actions CI. Terminology validation is deliberately out of scope, delegated to an optional HL7 Validator sidecar.</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">Tideng</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/Tideng">GitHub</a></span>
+  </div>
+  <p>An iPad-native SMART on FHIR client using the standard SMART standalone launch, verified against the public <code>launch.smarthealthit.org</code> sandbox and the Siming + Keycloak environment bundled with the project. Implements the resources a clinical browsing flow needs: <code>Patient</code>, <code>Encounter</code>, <code>MedicationRequest</code>, <code>Observation</code>, <code>Practitioner</code> / <code>PractitionerRole</code>.</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">FHIRpass</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/FHIRpass">GitHub</a></span>
+  </div>
+  <p>A healthcare appointment app MVP where patients book and staff process the bookings. It is built around the two things that actually block third-party services from reaching a hospital — the security perimeter and personal data compliance — so it splits into three tracks that each work on their own: an offline QR path, a SMART on FHIR authorization path (<code>ASWebAuthenticationSession</code> + OAuth2 + PKCE, token locked into the Keychain) and an iPad counter that scans and writes to FHIR. I built the iOS app, the FastAPI service, the HAPI FHIR deployment and the scanning frontend.</p>
+</div>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-title">TWCoreFHIRModels</span>
+    <span class="job-period"><a href="https://github.com/shinrenpan/TWCoreFHIRModels">GitHub</a></span>
+  </div>
+  <p>A Swift Package adding strongly typed TW Core IG extensions on top of Apple's FHIRModels. Producing FHIR resources that meet Taiwan's Ministry of Health and Welfare specs straight from <code>ModelsR4</code> means looking up Profile and CodeSystem URLs by hand, hardcoding them, and writing your own field validation. This package adds a <code>.twCore</code> namespace API so Taiwan-specific fields can be set directly, with <code>validateTWCore()</code> checking the SHALL-required fields.</p>
+  <ul>
+    <li>Strongly typed <code>.twCore</code> namespace — assign ID card number, declare Profile, validate SHALL fields without any hardcoded URLs</li>
+    <li>Swift 6.2 strict concurrency, GitHub Actions CI, distributed via SPM</li>
+  </ul>
+</div>
+
+<div class="proj-group">Earlier open-source work (Objective-C era)</div>
+
+  <p>Open-source components released during the 2014–2018 Objective-C years; <a href="https://github.com/shinrenpan/SRPPlayerViewController"><code>SRPPlayerViewController</code></a>, a minimal ijkplayer-based player, picked up around 30 stars. The rest are on GitHub.</p>
 <h2>Education</h2>
+
 <table>
-  <tr><th style="width:35%">Institution</th><th style="width:40%">Programme</th><th>Period</th></tr>
-  <tr><td>Chaoyang University of Technology</td><td>Information Management (evening programme)</td><td>Sep 2004 – Jan 2007</td></tr>
-  <tr><td>Kao Yuan University (5-year)</td><td>Electronic Engineering</td><td>—</td></tr>
+  <tr><th>Institution</th><th>Programme</th><th>Period</th></tr>
+  <tr><td>Chaoyang University of Technology</td><td>Information Management (evening programme)</td><td><span style="white-space:nowrap">Sep 2004 – Jan 2007</span></td></tr>
   <tr><td>Institute for Information Industry</td><td>iOS Development (6-month programme)</td><td>2009</td></tr>
 </table>
-<div class="note" style="margin-top:5px">
-  Graduation project: developed rhythm game <em>Block Ten</em> using cocos2d for iPhone, winning <strong>Gold Award at the 2009 Digital Content Creation Competition (Mobile Game category)</strong>. After graduating, contracted with classmates to build a <a href="https://www.youtube.com/watch?v=npV4b-Z9A4w&t=177s">music app</a>.
-</div>
-<p style="margin-top:6px; font-family:Arial,sans-serif;"><strong>Languages:</strong> Mandarin Chinese (native)　English (technical reading and writing)</p>
+
+<div class="note" style="margin-top:5px">Graduation project: developed rhythm game *Block Ten* using cocos2d for iPhone, winning <strong>Gold Award at the 2009 Digital Content Creation Competition (Mobile Game category)</strong>. After graduating, contracted with classmates to build a <a href="https://www.youtube.com/watch?v=npV4b-Z9A4w&amp;t=177s">music app</a>.</div>
+
+  <p><strong>Languages:</strong>Mandarin Chinese (native)　English (technical reading and writing)</p>
 
 </body>
 </html>
